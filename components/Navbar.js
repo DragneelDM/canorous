@@ -9,7 +9,6 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { name: "Home", href: "/" },
     { name: "Unreal Studio", href: "/unreal-studio" },
     { name: "Visual Studio", href: "/visual-studio" },
     { name: "Engineering", href: "/engineering" },

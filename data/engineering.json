@@ -1,0 +1,20 @@
+[
+  {
+    "title": "FEA Simulation - Valve Assembly",
+    "image": "/images/fea-valve.jpg",
+    "category": "CAD / FEA",
+    "description": "Finite element analysis for valve durability."
+  },
+  {
+    "title": "Mechanical Component Assembly",
+    "image": "/images/mechanical-component.jpg",
+    "category": "Mechanical",
+    "description": "Custom-engineered actuator assembly."
+  },
+  {
+    "title": "Electrical Distribution Panel",
+    "image": "/images/electrical-panel.jpg",
+    "category": "Electrical",
+    "description": "Designed and assembled compliant power distribution system."
+  }
+]

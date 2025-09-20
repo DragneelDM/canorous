@@ -1,14 +1,14 @@
 import Hero from "@components/Hero";
 
-export const pageMetadata = {
-  title: "Visual Page",
-};
-
-export default function visualStudioPage() {
+export default function VisualStudio() {
   return (
-      <main>
-        <Hero />
-        {/* Add portfolio / sub-brand sections below */}
-      </main>
-    );
+    <main>
+      <Hero
+        headline="Canorous Visual Studio"
+        subtitle="Explore our 3D assets and animations."
+        ctaText="View Projects"
+        ctaLink="#portfolio"
+      />
+    </main>
+  );
 }

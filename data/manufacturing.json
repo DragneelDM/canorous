@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Precision Valves",
+    "description": "High-quality valves for industrial applications.",
+    "image": "/images/manufacturing/valves.jpg"
+  },
+  {
+    "title": "Actuators",
+    "description": "Reliable actuators for automation systems.",
+    "image": "/images/manufacturing/actuators.jpg"
+  },
+  {
+    "title": "Custom Gears",
+    "description": "Durable gears built for heavy-duty machinery.",
+    "image": "/images/manufacturing/gears.jpg"
+  },
+  {
+    "title": "Pumps",
+    "description": "Industrial pumps engineered for efficiency.",
+    "image": "/images/manufacturing/pumps.jpg"
+  },
+  {
+    "title": "Bearings",
+    "description": "High-performance bearings with long service life.",
+    "image": "/images/manufacturing/bearings.jpg"
+  },
+  {
+    "title": "Hydraulic Cylinders",
+    "description": "Heavy-load hydraulic cylinders for multiple industries.",
+    "image": "/images/manufacturing/cylinders.jpg"
+  },
+  {
+    "title": "Flanges",
+    "description": "Precision flanges for pipelines and fittings.",
+    "image": "/images/manufacturing/flanges.jpg"
+  },
+  {
+    "title": "Shafts",
+    "description": "Custom shafts machined to exact tolerances.",
+    "image": "/images/manufacturing/shafts.jpg"
+  },
+  {
+    "title": "Industrial Fasteners",
+    "description": "Reliable fasteners for mechanical assemblies.",
+    "image": "/images/manufacturing/fasteners.jpg"
+  },
+  {
+    "title": "Seals",
+    "description": "High-grade seals for leak-proof solutions.",
+    "image": "/images/manufacturing/seals.jpg"
+  },
+  {
+    "title": "Couplings",
+    "description": "Flexible and rigid couplings for rotating equipment.",
+    "image": "/images/manufacturing/couplings.jpg"
+  },
+  {
+    "title": "Assemblies",
+    "description": "Turnkey industrial assemblies tailored to your project.",
+    "image": "/images/manufacturing/assemblies.jpg"
+  }
+]
