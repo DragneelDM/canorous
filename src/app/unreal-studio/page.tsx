@@ -8,7 +8,9 @@ export default function UnrealStudio() {
         subtitle="Explore our Unreal Engine projects: archviz, configurators, and interactive VR experiences."
         ctaText="View Projects"
         ctaLink="#portfolio"
-        loop={false}
+        backgroundType="video"
+        backgroundVideo="/videos/Vergil.mp4"
+        floatingShapes={true}
       />
     </main>
   );

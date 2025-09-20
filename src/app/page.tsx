@@ -5,8 +5,8 @@ export default function Home() {
     <main>
       <Hero
         headline="Canorous"
-        subtitle="We craft worlds, assets, and solutions across engineering, 3D, Unreal, and manufacturing."
-        ctaText="See Our Sub-Brands"
+        subtitle="We craft worlds, assets, and solutions across engineering, architecture, gaming and manufacturing."
+        ctaText="Find your end to end Solution"
         ctaLink="#subbrands"
         loop={true}
       />
