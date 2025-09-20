@@ -10,7 +10,7 @@ export default function Navbar() {
 
   const links = [
     { name: "Unreal Studio", href: "/unreal-studio" },
-    { name: "Visual Studio", href: "/visual-studio" },
+    { name: "3D Studio", href: "/3D-studio" },
     { name: "Engineering", href: "/engineering" },
     { name: "Manufacturing", href: "/manufacturing" }
   ];

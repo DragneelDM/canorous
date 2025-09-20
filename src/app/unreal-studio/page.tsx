@@ -4,10 +4,11 @@ export default function UnrealStudio() {
   return (
     <main>
       <Hero
-        headline="Canorous Unreal Studio"
+        subbrands={["Unreal Studio"]}
         subtitle="Explore our Unreal Engine projects: archviz, configurators, and interactive VR experiences."
         ctaText="View Projects"
         ctaLink="#portfolio"
+        loop={false}
       />
     </main>
   );

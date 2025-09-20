@@ -8,6 +8,7 @@ export default function Home() {
         subtitle="We craft worlds, assets, and solutions across engineering, 3D, Unreal, and manufacturing."
         ctaText="See Our Sub-Brands"
         ctaLink="#subbrands"
+        loop={true}
       />
     </main>
   );
