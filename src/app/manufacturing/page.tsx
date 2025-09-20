@@ -1,7 +1,14 @@
-export const pageMetadata = {
-  title: "manufacturing Page",
-};
+import Hero from "@components/Hero";
 
-export default function manufacturingPage() {
-  return <div>manufacturing Page</div>;
+export default function Manufacturing() {
+  return (
+    <main>
+      <Hero
+        headline="Canorous Manufacturing"
+        subtitle="Global Manufacturing & Trading Excellence – Precision, Quality, and Innovation"
+        ctaText="View Projects"
+        ctaLink="#portfolio"
+      />
+    </main>
+  );
 }

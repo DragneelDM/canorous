@@ -1,7 +1,14 @@
-export const pageMetadata = {
-  title: "Unreal-Studio Page",
-};
+import Hero from "@components/Hero";
 
-export default function UnrealStudioPage() {
-  return <div>Unreal-Studio Page</div>;
+export default function UnrealStudio() {
+  return (
+    <main>
+      <Hero
+        headline="Canorous Unreal Studio"
+        subtitle="Explore our Unreal Engine projects: archviz, configurators, and interactive VR experiences."
+        ctaText="View Projects"
+        ctaLink="#portfolio"
+      />
+    </main>
+  );
 }
