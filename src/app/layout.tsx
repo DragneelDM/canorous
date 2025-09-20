@@ -24,6 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.4/dist/tailwind.min.css" rel="stylesheet"
+      />
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
