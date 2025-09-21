@@ -4,11 +4,14 @@ export default function UnrealStudio() {
   return (
     <main>
       <Hero
-        subbrands={["Unreal Studio"]}
-        subtitle="Explore our Unreal Engine projects: archviz, configurators, and interactive VR experiences."
-        ctaText="View Projects"
+        headline="Canorous"
+        subbrands={["Arch Viz", "Configurable Products", "VR Experiences"]}
+        subtitle="Building interactive worlds and experiences in Unreal Engine."
+        ctaText="Explore Unreal Projects"
         ctaLink="#portfolio"
-        loop={false}
+        backgroundType="video"
+        backgroundVideo="/videos/unreal-demo.mp4"
+        overlayColor="bg-gray-900/50"
       />
     </main>
   );

@@ -7,11 +7,13 @@ export default function Engineering() {
   return (
     <main>
       <Hero
-        subbrands={["Engineering"]}
-        subtitle="Innovate Build"
-        ctaText="View Portfolio"
+        headline="Canorous"
+        subbrands={["CAD & Technical Docs", "FEA Services", "MEP/Infra", "Mechanical", "Electrical", "Plumbing"]}
+        subtitle="Engineering solutions that optimize efficiency, safety, and sustainability."
+        ctaText="Explore Engineering Work"
         ctaLink="#portfolio"
-        loop={false}
+        backgroundType="gradient"
+        overlayColor="bg-gray-900/60"
       />
 
       {/* Clients Section */}

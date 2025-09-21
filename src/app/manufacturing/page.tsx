@@ -8,11 +8,14 @@ export default function Manufacturing() {
     <main>
       {/* Hero */}
       <Hero
-        subbrands={["Manufacturing"]}
-        subtitle="Turnkey manufacturing solutions across valves, actuators, precision parts, and industrial assemblies."
-        ctaText="See Our Work"
+        headline="Canorous"
+        subbrands={["Turnkey Solutions", "Prototyping & Production", "Quality Assurance", "Global Delivery"]}
+        subtitle="Delivering fully assembled, tested products with global reach."
+        ctaText="View Manufacturing Portfolio"
         ctaLink="#portfolio"
-        loop={false}
+        backgroundType="video"
+        backgroundVideo="/videos/globe.mp4"
+        overlayColor="bg-gray-900/50"
       />
 
       {/* Clients Section */}
@@ -22,16 +25,35 @@ export default function Manufacturing() {
           <div className="overflow-hidden relative">
             <div className="flex gap-12 animate-marquee">
               {/* Duplicate logos for infinite effect */}
-              <img src="/images/clients/client1.png" alt="Client 1" className="h-12" />
-              <img src="/images/clients/client2.png" alt="Client 2" className="h-12" />
-              <img src="/images/clients/client3.png" alt="Client 3" className="h-12" />
-              <img src="/images/clients/client4.png" alt="Client 4" className="h-12" />
-              <img src="/images/clients/client5.png" alt="Client 5" className="h-12" />
+              <img
+                src="/images/clients/client1.png"
+                alt="Client 1"
+                className="h-12"
+              />
+              <img
+                src="/images/clients/client2.png"
+                alt="Client 2"
+                className="h-12"
+              />
+              <img
+                src="/images/clients/client3.png"
+                alt="Client 3"
+                className="h-12"
+              />
+              <img
+                src="/images/clients/client4.png"
+                alt="Client 4"
+                className="h-12"
+              />
+              <img
+                src="/images/clients/client5.png"
+                alt="Client 5"
+                className="h-12"
+              />
             </div>
           </div>
         </div>
       </section>
-
 
       {/* Portfolio */}
       <section id="portfolio" className="max-w-7xl mx-auto py-16 px-4">
@@ -53,13 +75,19 @@ export default function Manufacturing() {
           </p>
         </div>
 
-        {/* Image */}
+        {/* Globe Video */}
         <div className="flex justify-center">
-          <img
-            src="/images/manufacturing/global-trading.jpg"
-            alt="Global Trading"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="rounded-lg shadow-lg max-h-80 object-cover"
-          />
+          >
+            <source src="/videos/globe.mp4" type="video/mp4" />
+            <source src="/videos/globe.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
     </main>
