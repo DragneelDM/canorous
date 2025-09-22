@@ -7,13 +7,13 @@
   },
   {
     "title": "Mechanical Component Assembly",
-    "image": "/images/mechanical-component.jpg",
+    "image": "images/img2.png",
     "category": "Mechanical",
     "description": "Custom-engineered actuator assembly."
   },
   {
     "title": "Electrical Distribution Panel",
-    "image": "/images/electrical-panel.jpg",
+    "image": "images/img3.png",
     "category": "Electrical",
     "description": "Designed and assembled compliant power distribution system."
   }

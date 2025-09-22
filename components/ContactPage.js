@@ -1,5 +1,7 @@
 "use client";
 
+import { FaLinkedin } from "react-icons/fa";
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-gray-900 text-white px-4 md:px-16 py-16">
@@ -62,9 +64,9 @@ export default function ContactPage() {
           <div>
             <h3 className="text-2xl font-semibold mb-2">Follow Us</h3>
             <div className="flex gap-4">
-              <a href="https://www.linkedin.com/company/canorous-technologies-private-limited" className="hover:text-blue-500">LinkedIn</a>
-              <a href="#" className="hover:text-blue-500">Twitter</a>
-              <a href="#" className="hover:text-blue-500">Instagram</a>
+              <a href="https://www.linkedin.com/company/canorous-technologies-private-limited" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            <FaLinkedin />
+          </a>
             </div>
           </div>
 

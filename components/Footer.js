@@ -3,7 +3,7 @@ import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 py-12 mt-16 text-center md:text-left">
+    <footer className="bg-gray-900 py-12 text-center md:text-left">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-center">
         {/* Company Info */}
         <div>
@@ -15,10 +15,8 @@ export default function Footer() {
 
         {/* Social Links */}
         <div className="flex justify-center md:justify-center gap-6 text-gray-400 text-xl">
-          <a href="https://www.linkedin.com/company/canorous-technologies-private-limited" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-            <FaLinkedin />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+          
+          {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             <FaTwitter />
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
@@ -26,7 +24,7 @@ export default function Footer() {
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             <FaInstagram />
-          </a>
+          </a> */}
         </div>
 
         {/* CTA */}

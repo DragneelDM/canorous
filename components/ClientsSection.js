@@ -1,4 +1,4 @@
-import clientsData from "@data/ClientsData.json";
+import clientsData from "@data/clientsData.json";
 
 /**
  * @param {Object} props

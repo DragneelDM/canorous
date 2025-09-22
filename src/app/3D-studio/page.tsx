@@ -9,7 +9,8 @@ export default function VisualStudio() {
         subtitle="Crafting 3D environments and assets for visualization and interactive experiences."
         ctaText="See 3D Studio Work"
         ctaLink="#portfolio"
-        backgroundType="gradient"
+        backgroundType="video"
+        backgroundVideo="/videos/Outdoor-Clip.mp4"
         overlayColor="bg-gray-800/60"
         loop={1}
       />

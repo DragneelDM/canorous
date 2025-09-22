@@ -1,8 +1,10 @@
 import Hero from "@components/Hero";
 import PhilosophySection from "@components/PhilosophySection";
 import ServicesSection from "@components/ServicesSection";
-import PortfolioCarousel from "@components/PortfolioCarousel";
+import PortfolioSlider from "@components/PortfolioSlider";
 import ClientsSection from "@components/ClientsSection";
+import WhatSetsUsApart from "@components/WhatSetsUsApart"
+import projects from "@data/projectsData.json";
 
 export default function Home() {
   return (
@@ -14,14 +16,16 @@ export default function Home() {
         ctaText="Find your end to end solutions Today"
         ctaLink="#portfolio"
         backgroundType="video"
-        backgroundVideo="/videos/unreal-demo.mp4"
+        backgroundVideo="/videos/CanorousPromo.mp4"
         overlayColor="bg-gray-900/50"
       />
 
-      <PhilosophySection />
+      {/* <PhilosophySection /> */}
+
+      <WhatSetsUsApart />
 
       <ServicesSection />
-      <PortfolioCarousel />
+      <PortfolioSlider data={projects} fullScreen autoplay />
       <ClientsSection page="landing" />
     </main>
   );

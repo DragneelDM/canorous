@@ -1,6 +1,6 @@
 import Hero from "@components/Hero";
 import ServiceCard from "@components/ServiceCard";
-import PortfolioGrid from "@components/PortfolioGrid";
+import PortfolioSliderOriginalSize from "@components/PortfolioSliderOriginalSize";
 import ClientsSection from "@components/ClientsSection";
 import engineeringData from "@data/engineering.json";
 
@@ -46,7 +46,7 @@ export default function Engineering() {
       {/* Portfolio */}
       <section id="portfolio" className="max-w-7xl mx-auto py-16 px-4">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">Manufacturing Portfolio</h2>
-        <PortfolioGrid data={engineeringData} />
+        <PortfolioSliderOriginalSize data={engineeringData} />
       </section>
     </main>
   );

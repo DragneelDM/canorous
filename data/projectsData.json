@@ -1,0 +1,7 @@
+[
+  { "image": "/images/unreal/archviz1.jpg", "alt": "Archviz Project 1" },
+  { "image": "/images/unreal/archviz2.jpg", "alt": "Archviz Project 2" },
+  { "image": "/images/3d/prop1.jpg", "alt": "3D Prop 1" },
+  { "image": "/images/engineering/cad1.jpg", "alt": "CAD Project 1" },
+  { "image": "/images/manufacturing/item1.jpg", "alt": "Manufactured Item 1" }
+]

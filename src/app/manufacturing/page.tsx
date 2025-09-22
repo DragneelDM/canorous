@@ -21,7 +21,7 @@ export default function Manufacturing() {
       />
 
       {/* Clients Section */}
-      <ClientsSection page="manufacturing" />
+      <ClientsSection page="landing" />
 
 
       {/* Portfolio */}
