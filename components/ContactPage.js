@@ -52,15 +52,17 @@ export default function ContactPage() {
           <div>
             <h3 className="text-2xl font-semibold mb-2">Contact Info</h3>
             <p>Canorous Technologies</p>
-            <p>123 Business Street, City, Country</p>
-            <p>Email: contact@canorous.co</p>
-            <p>Phone: +91 123 456 7890</p>
+            <p>96-A, 1st Floor, Bharathi Colony,</p>
+            <p>2nd Cross East, Peelamedu,</p>
+            <p>Coimbatore - 641004</p>
+            <p>Email: sales@can-india.co.in</p>
+            <p>Phone: +91 90877 44900</p>
           </div>
 
           <div>
             <h3 className="text-2xl font-semibold mb-2">Follow Us</h3>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-blue-500">LinkedIn</a>
+              <a href="https://www.linkedin.com/company/canorous-technologies-private-limited" className="hover:text-blue-500">LinkedIn</a>
               <a href="#" className="hover:text-blue-500">Twitter</a>
               <a href="#" className="hover:text-blue-500">Instagram</a>
             </div>
@@ -70,7 +72,7 @@ export default function ContactPage() {
           <div className="mt-6">
             <iframe
               title="Company Location"
-              src="https://maps.google.com/maps?q=123%20Business%20Street%20City&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.186442005166!2d76.99290941169326!3d11.024634189094323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859ea69a84195%3A0xc7a8f1e8bad2d002!2sCanorous%20Technologies!5e0!3m2!1sen!2sin!4v1758534697357!5m2!1sen!2sin"
               width="100%"
               height="200"
               className="rounded-lg border-0"

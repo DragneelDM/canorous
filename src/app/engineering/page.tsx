@@ -1,6 +1,7 @@
 import Hero from "@components/Hero";
 import ServiceCard from "@components/ServiceCard";
 import PortfolioGrid from "@components/PortfolioGrid";
+import ClientsSection from "@components/ClientsSection";
 import engineeringData from "@data/engineering.json";
 
 export default function Engineering() {
@@ -8,30 +9,17 @@ export default function Engineering() {
     <main>
       <Hero
         headline="Canorous"
-        subbrands={["CAD & Technical Docs", "FEA Services", "MEP/Infra", "Mechanical", "Electrical", "Plumbing"]}
+        subbrands={["Engineering"]}
         subtitle="Engineering solutions that optimize efficiency, safety, and sustainability."
         ctaText="Explore Engineering Work"
         ctaLink="#portfolio"
         backgroundType="gradient"
         overlayColor="bg-gray-900/60"
+        loop={1}
       />
 
       {/* Clients Section */}
-      <section className="bg-gray-900 py-12">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-white mb-8">Trusted By</h2>
-          <div className="overflow-hidden relative">
-            <div className="flex gap-12 animate-marquee">
-              {/* Duplicate logos for infinite effect */}
-              <img src="/images/clients/client1.png" alt="Client 1" className="h-12" />
-              <img src="/images/clients/client2.png" alt="Client 2" className="h-12" />
-              <img src="/images/clients/client3.png" alt="Client 3" className="h-12" />
-              <img src="/images/clients/client4.png" alt="Client 4" className="h-12" />
-              <img src="/images/clients/client5.png" alt="Client 5" className="h-12" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <ClientsSection page="manufacturing" />
 
       {/* Services */}
       <section className="max-w-7xl mx-auto py-16 px-4">

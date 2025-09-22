@@ -1,0 +1,40 @@
+{
+  "clients": [
+    {
+      "name": "Epic Games",
+      "logo": "/logos/epic.png",
+      "type": "unreal",
+      "showOnLanding": true
+    },
+    {
+      "name": "Nvidia",
+      "logo": "/logos/nvidia.png",
+      "type": "unreal",
+      "showOnLanding": true
+    },
+    {
+      "name": "Bosch",
+      "logo": "/logos/bosch.png",
+      "type": "manufacturing",
+      "showOnLanding": true
+    },
+    {
+      "name": "GE",
+      "logo": "/logos/ge.png",
+      "type": "manufacturing",
+      "showOnLanding": true
+    },
+    {
+      "name": "Autodesk",
+      "logo": "/logos/autodesk.png",
+      "type": "studio3d",
+      "showOnLanding": true
+    },
+    {
+      "name": "Unity",
+      "logo": "/logos/unity.png",
+      "type": "studio3d",
+      "showOnLanding": false
+    }
+  ]
+}

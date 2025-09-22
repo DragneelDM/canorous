@@ -15,7 +15,7 @@ export default function Footer() {
 
         {/* Social Links */}
         <div className="flex justify-center md:justify-center gap-6 text-gray-400 text-xl">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+          <a href="https://www.linkedin.com/company/canorous-technologies-private-limited" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             <FaLinkedin />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
