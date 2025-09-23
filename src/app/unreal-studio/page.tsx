@@ -1,12 +1,31 @@
 import Hero from "@components/Hero";
-import MediaTextSection from "@components/MediaTextSection";
+import { StickyScrollRevealUnreal } from "@components/StickyScrollRevealUnreal";
+
+const unrealTextBlocks = [
+  {
+    title: "High-Fidelity Visuals",
+    desc: "Unreal Engine enables us to create photorealistic architectural visualizations.",
+  },
+  {
+    title: "Interactive Configurators",
+    desc: "Clients can explore options in real-time with immersive 3D configurators.",
+  },
+  {
+    title: "Virtual Reality Experiences",
+    desc: "Step into your vision before it’s built with VR walkthroughs and demos.",
+  },
+  {
+    title: "End-to-End Solutions",
+    desc: "From 3D assets to full VR environments, we handle everything in-house.",
+  },
+];
 
 export default function UnrealStudio() {
   return (
     <main>
       <Hero
         headline="Canorous"
-        subbrands={["Unreal tudio"]}
+        subbrands={["Unreal Studio"]}
         subtitle="Building interactive worlds and experiences in Unreal Engine."
         ctaText="Explore Unreal Projects"
         ctaLink="#portfolio"
@@ -15,20 +34,17 @@ export default function UnrealStudio() {
         overlayColor="bg-gray-900/50"
         loop={1}
       />
-      <MediaTextSection
-        mediaType="video"
-        mediaSrc="/videos/unreal-demo.mp4"
-        heading="Immersive Unreal Experiences"
-        description="We build high-fidelity visualization and interactive worlds for architects and designers."
-      />
 
-      <MediaTextSection
-        mediaType="image"
-        mediaSrc="/images/manufacturing/item1.jpg"
-        heading="Turnkey Manufacturing"
-        description="From prototyping to global trading, we provide end-to-end manufacturing solutions."
-        reverse={true}
-      />
+      {/* Sticky Scroll Section */}
+      <section className="w-full bg-gray-900 py-20">
+        <div className="max-w-7xl mx-auto">
+          {/* Optional Section Heading */}
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
+            Unreal Studio Capabilities
+          </h2>
+          <StickyScrollRevealUnreal />
+        </div>
+      </section>
     </main>
 
 
