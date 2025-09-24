@@ -36,12 +36,9 @@ export default function UnrealStudio() {
       />
 
       {/* Sticky Scroll Section */}
-      <section className="w-full bg-gray-900 py-20">
+      <section className="w-full bg-gray-900 py-20 mt-5">
         <div className="max-w-7xl mx-auto">
           {/* Optional Section Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
-            Unreal Studio Capabilities
-          </h2>
           <StickyScrollRevealUnreal />
         </div>
       </section>
