@@ -18,7 +18,7 @@ export function UnrealPin3() {
 
           {/* ✅ Replace gradient block with video */}
           <video
-            src="videos\lottery.mp4"
+            src="/videos\lottery.mp4"
             autoPlay
             loop
             muted

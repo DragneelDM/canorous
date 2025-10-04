@@ -1,19 +1,55 @@
 [
   {
     "title": "FEA Simulation - Valve Assembly",
-    "image": "images/img1.png",
+    "image": "/images/img1.png",
     "category": "CAD / FEA",
     "description": "Finite element analysis for valve durability."
   },
   {
     "title": "Mechanical Component Assembly",
-    "image": "images/img2.png",
+    "image": "/images/img2.png",
     "category": "Mechanical",
     "description": "Custom-engineered actuator assembly."
   },
   {
     "title": "Electrical Distribution Panel",
-    "image": "images/img3.png",
+    "image": "/images/img3.png",
+    "category": "Electrical",
+    "description": "Designed and assembled compliant power distribution system."
+  },
+  {
+    "title": "Electrical Distribution Panel",
+    "image": "/images/img4.png",
+    "category": "Electrical",
+    "description": "Designed and assembled compliant power distribution system."
+  },
+  {
+    "title": "Electrical Distribution Panel",
+    "image": "/images/img5.png",
+    "category": "Electrical",
+    "description": "Designed and assembled compliant power distribution system."
+  },
+  {
+    "title": "Electrical Distribution Panel",
+    "image": "/images/img6.png",
+    "category": "Electrical",
+    "description": "Designed and assembled compliant power distribution system."
+  },
+  {
+    "title": "Electrical Distribution Panel",
+    "image": "/images/img7.png",
+    "category": "Electrical",
+    "description": "Designed and assembled compliant power distribution system."
+  },
+  {
+    "title": "Electrical Distribution Panel",
+    "image": "/images/img8.png",
+    "category": "Electrical",
+    "description": "Designed and assembled compliant power distribution system."
+  },
+  {
+    "title": "Electrical Distribution Panel",
+    "image": "/images/img9.png",
     "category": "Electrical",
     "description": "Designed and assembled compliant power distribution system."
   }

@@ -18,7 +18,7 @@ export function Unreal() {
 
           {/* ✅ Replace gradient block with video */}
           <video
-            src="videos\VR_Headset.mp4"
+            src="/videos\VR_Headset.mp4"
             autoPlay
             loop
             muted

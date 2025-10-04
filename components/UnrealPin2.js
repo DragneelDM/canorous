@@ -18,7 +18,7 @@ export function UnrealPin2() {
 
           {/* ✅ Replace gradient block with video */}
           <video
-            src="videos\Customize.mp4"
+            src="/videos\Customize.mp4"
             autoPlay
             loop
             muted

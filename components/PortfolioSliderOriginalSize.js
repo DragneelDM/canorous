@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function PortfolioSliderOriginalSize({ data, autoplay = true }) {
+  console.log("engineeringData:", data);
   return (
     <div className="w-full max-w-6xl mx-auto py-12">
       <Swiper
