@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://canorous.com
+
+# Sitemaps
+Sitemap: https://canorous.com/sitemap.xml

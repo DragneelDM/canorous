@@ -1,6 +1,6 @@
 import Contact from "@components/ContactPage";
 
-export default function VisualStudio() {
+export default function contact() {
   return (
     <>
         <Contact/>

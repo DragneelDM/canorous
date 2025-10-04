@@ -1,11 +1,36 @@
 "use client";
-
+import { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 
 export default function ContactPage() {
+  const [status, setStatus] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const res = await fetch("/canorous/contact-form.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (data.status === "success") {
+        setStatus({ type: "success", msg: data.message });
+        e.currentTarget.reset();
+      } else {
+        setStatus({ type: "error", msg: data.message });
+      }
+    } catch (err) {
+      setStatus({ type: "error", msg: "Something went wrong. Please try again." });
+    }
+  };
+
   return (
     <main className="min-h-screen bg-gray-900 text-white px-4 md:px-16 py-16">
-      {/* Hero / Intro */}
       <section className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
         <p className="text-gray-300 max-w-2xl mx-auto">
@@ -13,41 +38,33 @@ export default function ContactPage() {
         </p>
       </section>
 
-      {/* Contact Form & Info */}
       <section className="grid md:grid-cols-2 gap-12">
         {/* Form */}
         <form
           className="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col gap-4"
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("Form submitted! (Add backend integration)");
-          }}
+          onSubmit={handleSubmit}
         >
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500"
-            required
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500"
-            required
-          />
-          <textarea
-            placeholder="Your Message"
-            rows={5}
-            className="p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500"
-            required
-          />
-          <button
-            type="submit"
-            className="mt-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition"
-          >
+          <input type="text" name="name" placeholder="Your Name" required className="p-3 rounded-md bg-gray-700" />
+          <input type="email" name="email" placeholder="Your Email" required className="p-3 rounded-md bg-gray-700" />
+          <input type="text" name="subject" placeholder="Subject" required className="p-3 rounded-md bg-gray-700" />
+          <textarea name="message" rows={5} placeholder="Your Message" required className="p-3 rounded-md bg-gray-700"></textarea>
+
+          <button type="submit" className="mt-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md">
             Send Message
           </button>
+
+          {/* Status Messages */}
+          {status && (
+            <p
+              className={`mt-4 text-center ${
+                status.type === "success" ? "text-green-400" : "text-red-400"
+              }`}
+            >
+              {status.msg}
+            </p>
+          )}
         </form>
+
 
         {/* Company Info */}
         <div className="flex flex-col justify-between gap-6">
@@ -65,8 +82,8 @@ export default function ContactPage() {
             <h3 className="text-2xl font-semibold mb-2">Follow Us</h3>
             <div className="flex gap-4">
               <a href="https://www.linkedin.com/company/canorous-technologies-private-limited" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-            <FaLinkedin />
-          </a>
+                <FaLinkedin />
+              </a>
             </div>
           </div>
 

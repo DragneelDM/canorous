@@ -33,7 +33,7 @@ export default function VideoTextGrid({ items }) {
               </div>
 
               {/* Text */}
-              <div className="flex-1">
+              <div className="flex- w-50 ms-50 me-50">
                 <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
                 <p className="text-gray-300 text-lg">{item.description}</p>
               </div>

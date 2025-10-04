@@ -3,6 +3,8 @@ import ServiceCard from "@components/ServiceCard";
 import PortfolioSliderOriginalSize from "@components/PortfolioSliderOriginalSize";
 import ClientsSection from "@components/ClientsSection";
 import engineeringData from "@data/engineering.json";
+import { pageMetadata } from "src/data/metadata";
+export const metadata = pageMetadata.engineering;
 
 export default function Engineering() {
   return (
@@ -13,7 +15,8 @@ export default function Engineering() {
         subtitle="Engineering solutions that optimize efficiency, safety, and sustainability."
         ctaText="Explore Engineering Work"
         ctaLink="#portfolio"
-        backgroundType="gradient"
+        backgroundType="video"
+        backgroundVideo="/videos/Mechanic.mp4"
         overlayColor="bg-gray-900/60"
         loop={1}
       />

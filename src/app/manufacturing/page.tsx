@@ -1,8 +1,9 @@
 import Hero from "@components/Hero";
 import PortfolioGrid from "@components/PortfolioGrid";
 import ClientsSection from "@components/ClientsSection";
-
 import manufacturingData from "@data/manufacturing.json";
+import { pageMetadata } from "src/data/metadata";
+export const metadata = pageMetadata.manufacturing;
 
 export default function Manufacturing() {
   return (
@@ -15,7 +16,7 @@ export default function Manufacturing() {
         ctaText="View Manufacturing Portfolio"
         ctaLink="#portfolio"
         backgroundType="video"
-        backgroundVideo="/videos/globe.mp4"
+        backgroundVideo="/videos/Warehouse.mp4"
         overlayColor="bg-gray-900/50"
         loop={1}
       />

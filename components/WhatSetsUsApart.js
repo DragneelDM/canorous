@@ -52,7 +52,7 @@ export default function WhatSetsUsApart() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          At Canorous, we don’t just solve problems—we engineer possibilities. Whether you're looking for design, prototyping, manufacturing, or process optimization, we are your trusted partner for shaping the future of engineering.
+          At Canorous, we don&apos;t just solve problems—we engineer possibilities. Whether you&apos;re looking for design, prototyping, manufacturing, or process optimization, we are your trusted partner for shaping the future of engineering.
         </motion.p>
       </div>
     </section>

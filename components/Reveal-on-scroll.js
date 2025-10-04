@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import { Typewriter } from "react-simple-typewriter";
+
 
 export default function Hero({ ...props }) {
   const [isVisible, setIsVisible] = useState(false);

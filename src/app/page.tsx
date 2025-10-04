@@ -1,5 +1,4 @@
 import Hero from "@components/Hero";
-import PhilosophySection from "@components/PhilosophySection";
 import ServicesSection from "@components/ServicesSection";
 import PortfolioSlider from "@components/PortfolioSlider";
 import ClientsSection from "@components/ClientsSection";
