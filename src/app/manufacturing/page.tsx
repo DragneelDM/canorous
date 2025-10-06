@@ -22,7 +22,7 @@ export default function Manufacturing() {
       />
 
       {/* Clients Section */}
-      <ClientsSection page="landing" />
+      <ClientsSection page="manufacturing" />
 
 
       {/* Portfolio */}

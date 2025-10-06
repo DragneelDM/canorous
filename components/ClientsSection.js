@@ -2,7 +2,7 @@ import clientsData from "@data/clientsData.json";
 
 /**
  * @param {Object} props
- * @param {"landing" | "unreal" | "manufacturing" | "studio3d"} props.page
+ * @param {"landing" | "unreal" | "manufacturing" | "studio3d" | "engineering"} props.page
  * @param {boolean} [props.showSectionTitle]
  */
 export default function ClientsSection({ page, showSectionTitle = true }) {
@@ -14,6 +14,8 @@ export default function ClientsSection({ page, showSectionTitle = true }) {
     filteredClients = clientsData.clients.filter(c => c.type === "unreal");
   } else if (page === "manufacturing") {
     filteredClients = clientsData.clients.filter(c => c.type === "manufacturing");
+  } else if (page === "engineering") {
+    filteredClients = clientsData.clients.filter(c => c.type === "engineering");
   } else if (page === "studio3d") {
     filteredClients = clientsData.clients.filter(c => c.type === "studio3d");
   }

@@ -22,7 +22,7 @@ export default function Engineering() {
       />
 
       {/* Clients Section */}
-      <ClientsSection page="manufacturing" />
+      <ClientsSection page="engineering" />
 
       {/* Services */}
       <section className="max-w-7xl mx-auto py-16 px-4">

@@ -1,40 +1,64 @@
 {
   "clients": [
     {
-      "name": "Epic Games",
-      "logo": "/logos/epic.png",
-      "type": "unreal",
+      "name": "Acuforce",
+      "logo": "/images/acufore.png",
+      "type": "engineering",
       "showOnLanding": true
     },
     {
-      "name": "Nvidia",
-      "logo": "/logos/nvidia.png",
-      "type": "unreal",
+      "name": "Trivikram",
+      "logo": "/images/Trivikram.png",
+      "type": "engineering",
       "showOnLanding": true
     },
     {
-      "name": "Bosch",
-      "logo": "/logos/bosch.png",
+      "name": "SteamFlow",
+      "logo": "/images/SteamFlow.jpeg",
+      "type": "engineering",
+      "showOnLanding": true
+    },
+    {
+      "name": "Emerson Appleton",
+      "logo": "/images/EmersonAppleton.webp",
+      "type": "engineering",
+      "showOnLanding": true
+    },
+    {
+      "name": "One Click Solutions",
+      "logo": "/images/One-Click-Solutions.png",
+      "type": "engineering",
+      "showOnLanding": true
+    },
+    {
+      "name": "IPROCURE 360",
+      "logo": "/images/IPROCURE 360.png",
       "type": "manufacturing",
       "showOnLanding": true
     },
     {
-      "name": "GE",
-      "logo": "/logos/ge.png",
-      "type": "manufacturing",
+      "name": "SchuF",
+      "logo": "/images/SchuF.png",
+      "type": "engineering",
       "showOnLanding": true
     },
     {
-      "name": "Autodesk",
-      "logo": "/logos/autodesk.png",
-      "type": "studio3d",
+      "name": "SME",
+      "logo": "/images/SME.png",
+      "type": "engineering",
       "showOnLanding": true
     },
     {
-      "name": "Unity",
-      "logo": "/logos/unity.png",
-      "type": "studio3d",
-      "showOnLanding": false
+      "name": "Khimiji Ramdas",
+      "logo": "/images/Khimiji-Ramdas.png",
+      "type": "engineering",
+      "showOnLanding": true
+    },
+    {
+      "name": "Vista View",
+      "logo": "/images/Vista-View.png",
+      "type": "unrealstudio",
+      "showOnLanding": true
     }
   ]
 }

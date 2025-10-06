@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const services = [
   {
     title: "Engineering",
-    desc: "CAD design, technical documentation, and turnkey engineering solutions.",
+    desc: "Simulations, technical documentation, and turnkey engineering solutions.",
     image: "/images/services/engineering.png",
     color: "border-blue-500",
   },
