@@ -64,7 +64,7 @@ export default function VisualStudio() {
         overlayColor="bg-gray-800/60"
         loop={1}
       />
-      <BentoGrid items={bentoItems} />
+      {/* BentoGrid items={bentoItems} */}
     </main>
   );
 }

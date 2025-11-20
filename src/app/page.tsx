@@ -16,15 +16,15 @@ export default function Home() {
         ctaLink="#portfolio"
         backgroundType="video"
         backgroundVideo="/videos/CanorousPromo.mp4"
-        overlayColor="bg-gray-900/50"
+        overlayColor="bg-gray-900/30"
       />
 
       {/* <PhilosophySection /> */}
 
       <WhatSetsUsApart />
 
-      <ServicesSection />
-      <PortfolioSlider data={projects} fullScreen autoplay />
+      {/* <ServicesSection /> */}
+      {/* <PortfolioSlider data={projects} fullScreen autoplay /> */}
       <ClientsSection page="landing" />
     </main>
   );

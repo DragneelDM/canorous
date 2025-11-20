@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -11,16 +12,25 @@ export default function Navbar() {
   const links = [
     { name: "Unreal Studio", href: "/unreal-studio" },
     { name: "3D Studio", href: "/3D-studio" },
-    { name: "Engineering", href: "/engineering" },
-    { name: "Manufacturing", href: "/manufacturing" }
+    { name: "Services", href: "/engineering" },
+    { name: "Careers", href: "/contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
     <nav className="sticky top-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         {/* Logo */}
-        <Link href="/" className="text-white font-bold text-xl">
-          Canorous
+        <Link href="/" className="flex items-center gap-2" aria-label="Canorous home">
+          <Image
+            src="/images/Company-logo2.png"
+            alt="Canorous"
+            width={160}
+            height={40}
+            priority
+            sizes="300px"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop links */}

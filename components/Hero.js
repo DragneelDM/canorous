@@ -12,6 +12,7 @@ export default function Hero({
   showBackground = true,
   backgroundType = "gradient", // "gradient" | "video"
   backgroundVideo = "",        // if using video
+  backgroundImage = "",        // if using image
   overlayColor = "bg-gray-900/70",
   loop = 0,                    // 🔹 default 0 = infinite loop
   cursor = true,               // 🔹 toggle cursor
@@ -30,6 +31,10 @@ export default function Hero({
         <div
           className={`absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 ${overlayColor}`}
         ></div>
+      )}
+
+      {showBackground && backgroundType === "Image" && backgroundImage && (
+        <img src={backgroundImage} alt="Background" className="absolute inset-0 w-full h-full object-cover" />
       )}
 
       {showBackground && backgroundType === "video" && backgroundVideo && (
