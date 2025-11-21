@@ -23,7 +23,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2" aria-label="Canorous home">
           <Image
-            src="/images/Company-logo2.png"
+            src="/images/Company-logo.png"
             alt="Canorous"
             width={160}
             height={40}
