@@ -1,17 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// Simple helper to escape for HTML output
-function h(string $s): string {
-    return htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-}
-
-// ---- CONFIG: set these to your DB credentials ----
-define('DB_HOST', 'localhost');      // usually localhost on cPanel
-define('DB_USER', 'rqqsllyj_MPmadhan');
-define('DB_PASS', 'madhan@can-india.co.in');
-define('DB_NAME', 'rqqsllyj_EmployeesDB');
-// -------------------------------------------------
+require_once __DIR__ . '/includes/config.php';
 
 $token = $_GET['t'] ?? '';
 $token = trim($token);
@@ -29,12 +19,9 @@ if ($token === '') {
 
 $employee = null;
 if (!isset($error)) {
-    // connect
-    $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-    if ($mysqli->connect_errno) {
-        http_response_code(500);
-        $error = 'Database connection failed.';
-    } else {
+    try {
+        $mysqli = get_db_connection();
+        
         // Prepared statement to find by token
         $sql = "SELECT employee_id, name, designation, department, status, photo_url, email, phone 
                 FROM employees
@@ -56,8 +43,15 @@ if (!isset($error)) {
             $stmt->close();
         }
         $mysqli->close();
+    } catch (Exception $e) {
+        http_response_code(500);
+        $error = 'Database connection failed.';
     }
 }
+
+// Set page metadata
+$page_title = 'Employee Verification | Canorous';
+$page_description = 'Verify employee information with Canorous Technologies';
 
 // Render HTML
 header('Content-Type: text/html; charset=utf-8');
@@ -65,57 +59,98 @@ header('Content-Type: text/html; charset=utf-8');
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Employee Verification</title>
-<style>
-  body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#f4f5f7; color:#111827; padding:28px; }
-  .card { max-width:520px; margin:24px auto; background:#fff; padding:28px; border-radius:12px; box-shadow:0 12px 30px rgba(15,23,42,.06); }
-  .photo { width:120px; height:120px; object-fit:cover; border-radius:12px; border:2px solid #e5e7eb; margin-bottom:16px; }
-  dt { font-size:.78rem; color:#6b7280; text-transform:uppercase; margin-top:10px; }
-  dd { margin:4px 0 12px; font-size:1rem; }
-  .status { display:inline-block; padding:6px 10px; border-radius:999px; font-weight:600; }
-  .status-active { background:#d1e7dd; color:#0f5132; }
-  .status-inactive { background:#f8d7da; color:#842029; }
-  .error { color:#b42318; font-weight:600; text-align:center; }
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?= h($page_title) ?></title>
+    <meta name="description" content="<?= h($page_description) ?>">
+    
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.4/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
 </head>
-<body>
-  <div class="card">
-    <h2>Employee Verification</h2>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center py-8 px-4">
+  <div class="max-w-2xl w-full bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12">
+    <h2 class="text-3xl font-bold mb-8 text-center">Employee Verification</h2>
 
 <?php if (isset($error)): ?>
-    <p class="error"><?= h($error) ?></p>
+    <div class="bg-red-900/50 border border-red-700 rounded-lg p-6 text-center">
+        <p class="text-red-200 font-semibold text-lg"><?= h($error) ?></p>
+        <a href="/" class="mt-4 inline-block text-blue-400 hover:text-blue-300">Return to Homepage</a>
+    </div>
 <?php else: ?>
-    <?php if (!empty($employee['photo_url'])): ?>
-        <img src="<?= h($employee['photo_url']) ?>" alt="Photo" class="photo">
-    <?php endif; ?>
+    <div class="space-y-6">
+        <?php if (!empty($employee['photo_url'])): ?>
+            <div class="flex justify-center mb-6">
+                <img 
+                    src="<?= h($employee['photo_url']) ?>" 
+                    alt="Employee Photo" 
+                    class="w-32 h-32 object-cover rounded-xl border-2 border-gray-700"
+                />
+            </div>
+        <?php endif; ?>
 
-    <dl>
-      <dt>Name</dt>
-      <dd><?= h($employee['name'] ?: '—') ?></dd>
+        <dl class="space-y-4">
+            <div>
+                <dt class="text-xs uppercase tracking-wider text-gray-400 mb-1">Name</dt>
+                <dd class="text-lg text-white"><?= h($employee['name'] ?: '—') ?></dd>
+            </div>
 
-      <dt>Employee ID</dt>
-      <dd><?= h($employee['employee_id'] ?: '—') ?></dd>
+            <div>
+                <dt class="text-xs uppercase tracking-wider text-gray-400 mb-1">Employee ID</dt>
+                <dd class="text-lg text-white"><?= h($employee['employee_id'] ?: '—') ?></dd>
+            </div>
 
-      <dt>Designation</dt>
-      <dd><?= h($employee['designation'] ?: '—') ?></dd>
+            <div>
+                <dt class="text-xs uppercase tracking-wider text-gray-400 mb-1">Designation</dt>
+                <dd class="text-lg text-white"><?= h($employee['designation'] ?: '—') ?></dd>
+            </div>
 
-      <dt>Department</dt>
-      <dd><?= h($employee['department'] ?: '—') ?></dd>
+            <div>
+                <dt class="text-xs uppercase tracking-wider text-gray-400 mb-1">Department</dt>
+                <dd class="text-lg text-white"><?= h($employee['department'] ?: '—') ?></dd>
+            </div>
 
-      <dt>Email</dt>
-      <dd><?= h($employee['email'] ?: '—') ?></dd>
+            <div>
+                <dt class="text-xs uppercase tracking-wider text-gray-400 mb-1">Email</dt>
+                <dd class="text-lg text-white">
+                    <?php if (!empty($employee['email'])): ?>
+                        <a href="mailto:<?= h($employee['email']) ?>" class="text-blue-400 hover:text-blue-300">
+                            <?= h($employee['email']) ?>
+                        </a>
+                    <?php else: ?>
+                        —
+                    <?php endif; ?>
+                </dd>
+            </div>
 
-      <dt>Phone</dt>
-      <dd><?= h($employee['phone'] ?: '—') ?></dd>
-    </dl>
+            <div>
+                <dt class="text-xs uppercase tracking-wider text-gray-400 mb-1">Phone</dt>
+                <dd class="text-lg text-white"><?= h($employee['phone'] ?: '—') ?></dd>
+            </div>
+        </dl>
 
-    <?php
-      $s = strtolower((string)($employee['status'] ?? 'inactive'));
-      $s = in_array($s, ['active','inactive'], true) ? $s : 'inactive';
-    ?>
-    <p><span class="status status-<?= h($s) ?>"><?= ucfirst(h($s)) ?></span></p>
+        <div class="pt-4 border-t border-gray-700">
+            <?php
+                $s = strtolower((string)($employee['status'] ?? 'inactive'));
+                $s = in_array($s, ['active','inactive'], true) ? $s : 'inactive';
+                $statusClass = $s === 'active' 
+                    ? 'bg-green-900/50 text-green-200 border-green-700' 
+                    : 'bg-red-900/50 text-red-200 border-red-700';
+            ?>
+            <div class="flex items-center gap-3">
+                <span class="text-sm uppercase tracking-wider text-gray-400">Status:</span>
+                <span class="px-4 py-2 rounded-full border font-semibold <?= $statusClass ?>">
+                    <?= ucfirst(h($s)) ?>
+                </span>
+            </div>
+        </div>
+
+        <div class="pt-6 text-center">
+            <a href="/" class="text-blue-400 hover:text-blue-300">Return to Homepage</a>
+        </div>
+    </div>
 <?php endif; ?>
 
   </div>

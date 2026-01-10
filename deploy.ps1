@@ -90,22 +90,7 @@ foreach ($file in $phpFiles) {
     }
 }
 
-# Copy portal directory
-$portalSource = Join-Path $PSScriptRoot "portal"
-$portalDest = Join-Path $PublicHtmlPath "portal"
-if (Test-Path $portalSource) {
-    if (-not $DryRun) {
-        if (Test-Path $portalDest) {
-            Remove-Item -Path $portalDest -Recurse -Force
-        }
-        Copy-Item -Path $portalSource -Destination $portalDest -Recurse -Force
-        Write-Success "  ✓ Copied portal/ directory"
-    } else {
-        Write-Info "  Would copy: $portalSource\* -> $portalDest\*"
-    }
-} else {
-    Write-Warning "  ⚠ portal/ directory not found (skipping)"
-}
+# Portal directory removed - no longer needed
 
 # Step 4: Copy .htaccess
 Write-Info "`n[4/4] Copying .htaccess..."
@@ -125,7 +110,7 @@ if (Test-Path $htaccessSource) {
 Write-Success "`n=== Deployment Complete! ===" -ForegroundColor Green
 Write-Info "Files deployed to: $PublicHtmlPath"
 Write-Info "`nNext steps:"
-Write-Info "  1. Verify database credentials in portal/config.php and verify.php"
-Write-Info "  2. Test the site: https://yourdomain.com"
-Write-Info "  3. Test portal: https://yourdomain.com/portal/"
+Write-Info "  1. Install PHPMailer: composer require phpmailer/phpmailer (required for contact form)"
+Write-Info "  2. Verify database credentials in verify.php (if using employee verification)"
+Write-Info "  3. Test the site: https://yourdomain.com"
 
