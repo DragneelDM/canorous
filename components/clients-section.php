@@ -50,7 +50,7 @@ if (empty($filteredClients)) {
     <div class="flex flex-wrap justify-center gap-6">
         <?php foreach ($filteredClients as $client): ?>
             <div class="w-32 h-20 flex items-center justify-center bg-gray-800 rounded shadow">
-                <img src="<?= h($client['logo']) ?>" alt="<?= h($client['name']) ?>" class="max-h-12 object-contain" />
+                <img src="<?= asset($client['logo']) ?>" alt="<?= h($client['name']) ?>" class="max-h-12 object-contain" />
             </div>
         <?php endforeach; ?>
     </div>

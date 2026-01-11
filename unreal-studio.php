@@ -10,17 +10,17 @@ $unrealItems = [
     [
         'title' => 'Virtual Reality Experiences',
         'description' => 'Step into your projects before they\'re built with immersive VR walkthroughs that give clients and stakeholders a true sense of scale and space.',
-        'video' => '/videos/VR_Headset.mp4',
+        'video' => 'public/videos/VR_Headset.mp4',
     ],
     [
         'title' => 'Interactive Configurators',
         'description' => 'Explore design options in real-time. Our configurators let users customize products, interiors, and environments seamlessly.',
-        'video' => '/videos/Customize.mp4',
+        'video' => 'public/videos/Customize.mp4',
     ],
     [
         'title' => 'Gaming Applications',
         'description' => 'From interactive mechanics to visually striking worlds, our Unreal expertise extends to creating engaging gaming experiences.',
-        'video' => '/videos/Gameplay.mp4',
+        'video' => 'public/videos/Gameplay.mp4',
     ],
 ];
 ?>
@@ -34,7 +34,7 @@ $unrealItems = [
     $ctaText = 'Explore Projects';
     $ctaLink = '#portfolio';
     $backgroundType = 'video';
-    $backgroundVideo = '/videos/Gameplay.mp4';
+    $backgroundVideo = 'public/videos/Gameplay.mp4';
     $overlayColor = 'bg-gray-900/50';
     include __DIR__ . '/components/hero.php';
     ?>

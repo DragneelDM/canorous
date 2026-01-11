@@ -1,6 +1,14 @@
 <?php
 declare(strict_types=1);
 
+// Base URL configuration (for XAMPP subdirectory support)
+// Auto-detect the base path from the current script location
+$script_name = $_SERVER['SCRIPT_NAME'] ?? '';
+$base_path = dirname($script_name);
+// If we're in the root or a direct PHP file, use empty string, otherwise use the directory
+$base_path = ($base_path === '/' || $base_path === '\\') ? '' : $base_path;
+define('BASE_URL', $base_path);
+
 // Database configuration
 define('DB_HOST', 'localhost');
 define('DB_USER', 'rqqsllyj_MPmadhan');
@@ -10,6 +18,13 @@ define('DB_NAME', 'rqqsllyj_EmployeesDB');
 // Helper function to escape HTML output
 function h(string $s): string {
     return htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+
+// Helper function to generate asset URLs with base path
+function asset(string $path): string {
+    // Remove leading slash if present
+    $path = ltrim($path, '/');
+    return BASE_URL . '/' . $path;
 }
 
 // Generate strong token for employee verification

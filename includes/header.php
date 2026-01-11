@@ -17,11 +17,11 @@ $page_keywords = $page_keywords ?? 'MEP engineering, turnkey manufacturing, Unre
     <meta name="description" content="<?= h($page_description) ?>">
     <meta name="keywords" content="<?= h($page_keywords) ?>">
     
-    <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.4/dist/tailwind.min.css" rel="stylesheet">
-    
+    <!-- Tailwind CSS via Play CDN (works with tracking prevention) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="<?= asset('assets/css/custom.css') ?>">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="<?= h($page_title) ?>">
@@ -35,9 +35,9 @@ $page_keywords = $page_keywords ?? 'MEP engineering, turnkey manufacturing, Unre
     <nav class="sticky top-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
             <!-- Logo -->
-            <a href="/" class="flex items-center gap-2" aria-label="Canorous home">
+            <a href="<?= asset('') ?>" class="flex items-center gap-2" aria-label="Canorous home">
                 <img
-                    src="/images/Company-logo.png"
+                    src="<?= asset('public/images/Company-logo.png') ?>"
                     alt="Canorous"
                     class="h-10 w-auto object-contain"
                 />
@@ -47,11 +47,11 @@ $page_keywords = $page_keywords ?? 'MEP engineering, turnkey manufacturing, Unre
             <div class="hidden md:flex space-x-6">
                 <?php
                 $links = [
-                    ['name' => 'Unreal Studio', 'href' => '/unreal-studio.php'],
-                    ['name' => '3D Studio', 'href' => '/3d-studio.php'],
-                    ['name' => 'Services', 'href' => '/engineering.php'],
-                    ['name' => 'Careers', 'href' => '/contact.php'],
-                    ['name' => 'Contact', 'href' => '/contact.php'],
+                    ['name' => 'Unreal Studio', 'href' => asset('unreal-studio.php')],
+                    ['name' => '3D Studio', 'href' => asset('3d-studio.php')],
+                    ['name' => 'Services', 'href' => asset('engineering.php')],
+                    ['name' => 'Careers', 'href' => asset('contact.php')],
+                    ['name' => 'Contact', 'href' => asset('contact.php')],
                 ];
                 foreach ($links as $link):
                     $isActive = ($current_path === $link['href'] || $current_path === str_replace('.php', '', $link['href']));

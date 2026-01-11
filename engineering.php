@@ -18,7 +18,7 @@ $serviceSections = [
             'Process & Piping',
             'Civil & Structural',
         ],
-        'image' => '/images/digital-plant.jpg',
+        'image' => 'public/images/digital-plant.jpg',
     ],
     [
         'title' => 'Product Support',
@@ -28,13 +28,13 @@ $serviceSections = [
             'After Market Engineering',
             'Sustenance Engineering',
         ],
-        'image' => '/images/product-support.jpg',
+        'image' => 'public/images/product-support.jpg',
     ],
     [
         'title' => 'Simulation & Analysis',
         'blurb' => 'Virtual validation to de-risk builds using multi-physics simulations, optimization, and performance studies.',
         'items' => ['CFD Analysis', 'FEA Analysis'],
-        'image' => '/images/simulation-analysis.jpg',
+        'image' => 'public/images/simulation-analysis.jpg',
     ],
 ];
 ?>
@@ -43,7 +43,7 @@ $serviceSections = [
     <!-- Services -->
     <section class="relative isolate overflow-hidden py-24">
         <img 
-            src="/images/engineering-hero.webp" 
+            src="public/images/engineering-hero.webp" 
             alt="" 
             class="absolute inset-0 -z-20 w-full h-full object-cover"
         />

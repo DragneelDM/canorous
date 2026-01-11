@@ -31,7 +31,7 @@ $overlayColor = $overlayColor ?? 'bg-gray-900/70';
     <?php endif; ?>
 
     <?php if ($showBackground && $backgroundType === 'image' && $backgroundImage): ?>
-        <img src="<?= h($backgroundImage) ?>" alt="Background" class="absolute inset-0 w-full h-full object-cover" />
+        <img src="<?= asset($backgroundImage) ?>" alt="Background" class="absolute inset-0 w-full h-full object-cover" />
     <?php endif; ?>
 
     <?php if ($showBackground && $backgroundType === 'video' && $backgroundVideo): ?>
@@ -42,7 +42,7 @@ $overlayColor = $overlayColor ?? 'bg-gray-900/70';
             playsinline
             class="absolute inset-0 w-full h-full object-cover"
         >
-            <source src="<?= h($backgroundVideo) ?>" type="video/mp4" />
+            <source src="<?= asset($backgroundVideo) ?>" type="video/mp4" />
         </video>
     <?php endif; ?>
 

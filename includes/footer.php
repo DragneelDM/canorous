@@ -20,7 +20,7 @@
             <!-- CTA -->
             <div class="flex justify-center md:justify-end">
                 <a
-                    href="/contact.php"
+                    href="<?= asset('contact.php') ?>"
                     class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition"
                 >
                     Contact Us
@@ -35,6 +35,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="/assets/js/mobile-menu.js"></script>
+    <script src="<?= asset('assets/js/mobile-menu.js') ?>"></script>
 </body>
 </html>

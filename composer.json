@@ -1,0 +1,18 @@
+{
+    "name": "canorous/website",
+    "description": "Canorous Technologies Website - PHP Version",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {}
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

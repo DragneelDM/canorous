@@ -16,7 +16,7 @@ $page_keywords = 'MEP engineering, turnkey manufacturing, Unreal Engine, VR/AR, 
     $ctaText = 'Find your end to end solutions Today';
     $ctaLink = '#portfolio';
     $backgroundType = 'video';
-    $backgroundVideo = '/videos/CanorousPromo.mp4';
+    $backgroundVideo = 'public/videos/CanorousPromo.mp4';
     $overlayColor = 'bg-gray-900/30';
     include __DIR__ . '/components/hero.php';
     ?>

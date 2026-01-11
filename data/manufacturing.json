@@ -2,61 +2,61 @@
   {
     "title": "Precision Valves",
     "description": "High-quality valves for industrial applications.",
-    "image": "/images/bracket.jpg"
+    "image": "public/images/bracket.jpg"
   },
   {
     "title": "Actuators",
     "description": "Reliable actuators for automation systems.",
-    "image": "/images/brass.jpg"
+    "image": "public/images/brass.jpg"
   },
   {
     "title": "Custom Gears",
     "description": "Durable gears built for heavy-duty machinery.",
-    "image": "/images/crimps.jpg"
+    "image": "public/images/crimps.jpg"
   },
   {
     "title": "Pumps",
     "description": "Industrial pumps engineered for efficiency.",
-    "image": "/images/Galvanized.jpg"
+    "image": "public/images/Galvanized.jpg"
   },
   {
     "title": "Bearings",
     "description": "High-performance bearings with long service life.",
-    "image": "/images/light tower.jpg"
+    "image": "public/images/light tower.jpg"
   },
   {
     "title": "Hydraulic Cylinders",
     "description": "Heavy-load hydraulic cylinders for multiple industries.",
-    "image": "/images/pullev.jpg"
+    "image": "public/images/pullev.jpg"
   },
   {
     "title": "Flanges",
     "description": "Precision flanges for pipelines and fittings.",
-    "image": "/images/rope sling.jpg"
+    "image": "public/images/rope sling.jpg"
   },
   {
     "title": "Shafts",
     "description": "Custom shafts machined to exact tolerances.",
-    "image": "/images/slings.jpg"
+    "image": "public/images/slings.jpg"
   },
   {
     "title": "Industrial Fasteners",
     "description": "Reliable fasteners for mechanical assemblies.",
-    "image": "/images/swages.jpg"
+    "image": "public/images/swages.jpg"
   },
   {
     "title": "Seals",
     "description": "High-grade seals for leak-proof solutions.",
-    "image": "/images/thimbles.jpg"
+    "image": "public/images/thimbles.jpg"
   },
   {
     "title": "Couplings",
     "description": "Flexible and rigid couplings for rotating equipment.",
-    "image": "/images/stainless-steel.webp"
+    "image": "public/images/stainless-steel.webp"
   },
   {
     "title": "Assemblies",
     "description": "Turnkey industrial assemblies tailored to your project.",
-    "image": "/images/steel-wire-rope.webp"
+    "image": "public/images/steel-wire-rope.webp"
   }
 ]

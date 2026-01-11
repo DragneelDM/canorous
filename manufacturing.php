@@ -19,7 +19,7 @@ $manufacturingData = load_json_data('manufacturing.json');
     $ctaText = 'View Manufacturing Portfolio';
     $ctaLink = '#portfolio';
     $backgroundType = 'video';
-    $backgroundVideo = '/videos/Warehouse.mp4';
+    $backgroundVideo = 'public/videos/Warehouse.mp4';
     $overlayColor = 'bg-gray-900/50';
     include __DIR__ . '/components/hero.php';
     ?>
@@ -62,8 +62,8 @@ $manufacturingData = load_json_data('manufacturing.json');
                 playsinline
                 class="rounded-lg shadow-lg max-h-80 object-cover"
             >
-                <source src="/videos/globe.mp4" type="video/mp4" />
-                <source src="/videos/globe.webm" type="video/webm" />
+                <source src="public/videos/globe.mp4" type="video/mp4" />
+                <source src="public/videos/globe.webm" type="video/webm" />
                 Your browser does not support the video tag.
             </video>
         </div>

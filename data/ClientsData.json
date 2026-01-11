@@ -2,61 +2,55 @@
   "clients": [
     {
       "name": "Acuforce",
-      "logo": "/images/acufore.png",
+      "logo": "public/images/acufore.png",
       "type": "engineering",
       "showOnLanding": true
     },
     {
       "name": "Trivikram",
-      "logo": "/images/Trivikram.png",
+      "logo": "public/images/Trivikram.png",
       "type": "engineering",
       "showOnLanding": true
     },
     {
       "name": "SteamFlow",
-      "logo": "/images/SteamFlow.jpeg",
+      "logo": "public/images/SteamFlow.jpeg",
       "type": "engineering",
       "showOnLanding": true
     },
     {
       "name": "Emerson Appleton",
-      "logo": "/images/EmersonAppleton.webp",
+      "logo": "public/images/EmersonAppleton.webp",
       "type": "engineering",
       "showOnLanding": true
     },
     {
       "name": "One Click Solutions",
-      "logo": "/images/One-Click-Solutions.png",
+      "logo": "public/images/One-Click-Solutions.png",
       "type": "engineering",
       "showOnLanding": true
     },
     {
-      "name": "IPROCURE 360",
-      "logo": "/images/IPROCURE 360.png",
-      "type": "manufacturing",
-      "showOnLanding": true
-    },
-    {
       "name": "SchuF",
-      "logo": "/images/SchuF.png",
+      "logo": "public/images/SchuF.png",
       "type": "engineering",
       "showOnLanding": true
     },
     {
       "name": "SME",
-      "logo": "/images/SME.png",
+      "logo": "public/images/SME.png",
       "type": "engineering",
       "showOnLanding": true
     },
     {
       "name": "Khimiji Ramdas",
-      "logo": "/images/Khimiji-Ramdas.png",
+      "logo": "public/images/Khimiji-Ramdas.png",
       "type": "engineering",
       "showOnLanding": true
     },
     {
       "name": "Vista View",
-      "logo": "/images/Vista-View.png",
+      "logo": "public/images/Vista-View.png",
       "type": "unrealstudio",
       "showOnLanding": true
     }

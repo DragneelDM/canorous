@@ -16,7 +16,7 @@ $page_keywords = '3D visualization, 3D modeling, architectural visualization, 3D
     $ctaText = 'See 3D Studio Work';
     $ctaLink = '#portfolio';
     $backgroundType = 'video';
-    $backgroundVideo = '/videos/Outdoor-Clip.mp4';
+    $backgroundVideo = 'public/videos/Outdoor-Clip.mp4';
     $overlayColor = 'bg-gray-800/60';
     include __DIR__ . '/components/hero.php';
     ?>
