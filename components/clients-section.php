@@ -42,16 +42,18 @@ if (empty($filteredClients)) {
     return;
 }
 ?>
-<section class="py-16 bg-gray-900 text-white text-center">
+<section class="py-12 sm:py-16 md:py-20 bg-gray-900 text-white text-center">
     <?php if ($showSectionTitle): ?>
-        <h2 class="text-2xl font-bold mb-12">Our Clients</h2>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 px-4">Our Clients</h2>
     <?php endif; ?>
 
-    <div class="flex flex-wrap justify-center gap-6">
-        <?php foreach ($filteredClients as $client): ?>
-            <div class="w-32 h-20 flex items-center justify-center bg-gray-800 rounded shadow">
-                <img src="<?= asset($client['logo']) ?>" alt="<?= h($client['name']) ?>" class="max-h-12 object-contain" />
-            </div>
-        <?php endforeach; ?>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
+            <?php foreach ($filteredClients as $client): ?>
+                <div class="aspect-[3/2] flex items-center justify-center bg-gray-800 rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-750 transition-all p-4">
+                    <img src="<?= asset($client['logo']) ?>" alt="<?= h($client['name']) ?>" class="max-h-12 sm:max-h-14 md:max-h-16 w-auto object-contain" />
+                </div>
+            <?php endforeach; ?>
+        </div>
     </div>
 </section>

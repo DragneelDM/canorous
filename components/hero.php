@@ -24,7 +24,7 @@ $backgroundVideo = $backgroundVideo ?? '';
 $backgroundImage = $backgroundImage ?? '';
 $overlayColor = $overlayColor ?? 'bg-gray-900/70';
 ?>
-<section class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+<section class="relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
     <!-- Background -->
     <?php if ($showBackground && $backgroundType === 'gradient'): ?>
         <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 <?= h($overlayColor) ?>"></div>
@@ -51,15 +51,15 @@ $overlayColor = $overlayColor ?? 'bg-gray-900/70';
     <?php endif; ?>
 
     <!-- Hero Content -->
-    <div class="relative z-20 text-center px-4 max-w-6xl mx-auto">
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+    <div class="relative z-20 text-center px-4 sm:px-6 md:px-8 lg:px-12 max-w-6xl mx-auto">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-4 sm:mb-6 leading-tight">
             <?= h($headline) ?>
         </h1>
 
         <?php if (!empty($subbrands)): ?>
-            <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-6">
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6">
                 <?php foreach ($subbrands as $subbrand): ?>
-                    <span class="px-4 py-2 text-white text-sm md:text-base font-semibold rounded-full border-2 border-blue-400 hover:border-red-400 transition-colors">
+                    <span class="px-3 py-1.5 sm:px-4 sm:py-2 text-white text-xs sm:text-sm md:text-base font-semibold rounded-full border-2 border-blue-400 hover:border-red-400 transition-colors">
                         <?= h($subbrand) ?>
                     </span>
                 <?php endforeach; ?>
@@ -67,12 +67,12 @@ $overlayColor = $overlayColor ?? 'bg-gray-900/70';
         <?php endif; ?>
 
         <?php if ($subtitle): ?>
-            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto"><?= h($subtitle) ?></p>
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto"><?= h($subtitle) ?></p>
         <?php endif; ?>
 
         <a
             href="<?= h($ctaLink) ?>"
-            class="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-red-600 hover:from-blue-700 hover:to-red-700 text-white font-bold rounded-lg transition-all shadow-lg hover:scale-105 transform"
+            class="inline-block px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg bg-gradient-to-r from-blue-600 to-red-600 hover:from-blue-700 hover:to-red-700 text-white font-bold rounded-lg transition-all shadow-lg hover:scale-105 transform"
         >
             <?= h($ctaText) ?>
         </a>

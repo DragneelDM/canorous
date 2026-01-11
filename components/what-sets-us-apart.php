@@ -23,22 +23,22 @@ $points = [
     ],
 ];
 ?>
-<section class="py-20 bg-gray-950 text-white">
-    <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+<section class="py-12 sm:py-16 md:py-20 bg-gray-950 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-10 md:mb-12 px-4">
             What Sets Us Apart
         </h2>
 
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <?php foreach ($points as $idx => $point): ?>
-                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all hover:shadow-xl hover:shadow-red-500/20 opacity-0 animate-fade-in-up" style="animation-delay: <?= $idx * 0.2 ?>s;">
-                    <h3 class="text-xl font-semibold mb-3 text-blue-400"><?= h($point['title']) ?></h3>
-                    <p class="text-gray-300 text-sm"><?= h($point['desc']) ?></p>
+                <div class="bg-gray-800 rounded-xl p-5 sm:p-6 border border-gray-700 hover:border-red-500 transition-all hover:shadow-xl hover:shadow-red-500/20 opacity-0 animate-fade-in-up" style="animation-delay: <?= $idx * 0.2 ?>s;">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-blue-400"><?= h($point['title']) ?></h3>
+                    <p class="text-gray-300 text-sm sm:text-base"><?= h($point['desc']) ?></p>
                 </div>
             <?php endforeach; ?>
         </div>
 
-        <p class="mt-12 text-center text-gray-300 text-lg md:text-xl opacity-0 animate-fade-in" style="animation-delay: 0.8s;">
+        <p class="mt-8 sm:mt-10 md:mt-12 text-center text-gray-300 text-base sm:text-lg md:text-xl opacity-0 animate-fade-in px-4" style="animation-delay: 0.8s;">
             Most companies need 3-5 vendors to go from engineering design to immersive VR experience. We deliver it all—engineering, 3D assets, Unreal/Unity development, and cloud deployment—as one integrated team.
         </p>
     </div>

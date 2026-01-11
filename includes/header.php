@@ -36,18 +36,18 @@ $page_keywords = $page_keywords ?? 'MEP engineering, turnkey manufacturing, Unre
 </head>
 <body class="antialiased">
     <nav class="sticky top-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-14 sm:h-16">
             <!-- Logo -->
             <a href="<?= asset('') ?>" class="flex items-center gap-2" aria-label="Canorous home">
                 <img
                     src="<?= asset('public/images/Company-logo.png') ?>"
                     alt="Canorous"
-                    class="h-10 w-auto object-contain"
+                    class="h-8 sm:h-10 w-auto object-contain"
                 />
             </a>
 
             <!-- Desktop links -->
-            <div class="hidden md:flex space-x-6 items-center">
+            <div class="hidden md:flex space-x-4 lg:space-x-6 items-center">
                 <?php
                 $links = [
                     [
@@ -115,16 +115,22 @@ $page_keywords = $page_keywords ?? 'MEP engineering, turnkey manufacturing, Unre
             <div class="md:hidden">
                 <button
                     id="mobile-menu-button"
-                    class="text-white focus:outline-none"
+                    class="text-white focus:outline-none p-2 hover:bg-gray-800 rounded-md transition-colors"
                     aria-label="Toggle menu"
+                    aria-expanded="false"
                 >
-                    <span id="menu-icon">☰</span>
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
                 </button>
             </div>
         </div>
 
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 px-4 pb-4 space-y-2">
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 px-4 pb-4 space-y-2 transition-all duration-300 ease-in-out">
             <?php foreach ($links as $link):
                 $isActive = isset($link['href']) && $link['href'] !== '#' && ($current_path === $link['href'] || $current_path === str_replace('.php', '', $link['href']));
 
@@ -133,7 +139,7 @@ $page_keywords = $page_keywords ?? 'MEP engineering, turnkey manufacturing, Unre
                 <!-- Mobile Dropdown -->
                 <div class="mobile-dropdown">
                     <button
-                        class="w-full text-left text-white hover:text-blue-500 font-medium flex items-center justify-between mobile-dropdown-trigger"
+                        class="w-full text-left text-white hover:text-blue-500 font-medium flex items-center justify-between py-3 mobile-dropdown-trigger"
                     >
                         <?= h($link['name']) ?>
                         <svg class="w-4 h-4 transition-transform mobile-dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,7 +160,7 @@ $page_keywords = $page_keywords ?? 'MEP engineering, turnkey manufacturing, Unre
             <?php else: ?>
                 <a
                     href="<?= h($link['href']) ?>"
-                    class="block text-white hover:text-blue-500 font-medium <?= $isActive ? 'text-blue-500' : '' ?>"
+                    class="block text-white hover:text-blue-500 font-medium py-3 <?= $isActive ? 'text-blue-500' : '' ?>"
                 >
                     <?= h($link['name']) ?>
                 </a>
@@ -162,3 +168,20 @@ $page_keywords = $page_keywords ?? 'MEP engineering, turnkey manufacturing, Unre
             <?php endforeach; ?>
         </div>
     </nav>
+
+    <script>
+        // Mobile menu toggle with smooth icon transition
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+            const button = this;
+
+            menu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+
+            const isExpanded = !menu.classList.contains('hidden');
+            button.setAttribute('aria-expanded', isExpanded);
+        });
+    </script>

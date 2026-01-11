@@ -74,18 +74,18 @@ $differentiators = [
     ?>
 
     <!-- Company Story -->
-    <section class="py-20 bg-gradient-to-b from-gray-950 to-gray-900">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+    <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-950 to-gray-900">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-10 md:mb-12">
+                <p class="text-blue-400 uppercase tracking-[0.2em] sm:tracking-[0.3em] text-xs sm:text-sm font-semibold mb-2 sm:mb-3">
                     Our Story
                 </p>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 px-4">
                     Engineering Possibilities
                 </h2>
             </div>
 
-            <div class="space-y-8 text-lg text-gray-300 leading-relaxed">
+            <div class="space-y-6 sm:space-y-8 text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
                 <p>
                     Canorous was founded with a vision to integrate engineering with immersive visualization—bridging the gap between design validation and client experience.
                 </p>
@@ -103,16 +103,16 @@ $differentiators = [
     </section>
 
     <!-- What Makes Us Different -->
-    <section class="py-20 bg-gradient-to-b from-gray-900 to-gray-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+    <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 to-gray-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 sm:mb-12 md:mb-16">
+                <p class="text-blue-400 uppercase tracking-[0.2em] sm:tracking-[0.3em] text-xs sm:text-sm font-semibold mb-2 sm:mb-3">
                     Our Advantage
                 </p>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 px-4">
                     What Makes Us Different
                 </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                     We're not generalists. We specialize in the intersection of engineering, manufacturing, and immersive visualization.
                 </p>
             </div>

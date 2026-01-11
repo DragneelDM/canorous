@@ -3,17 +3,34 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/includes/config.php';
 
+// Get client IP for rate limiting
+$client_ip = get_client_ip();
+
+// Check rate limiting first
+$rate_limit_check = is_rate_limited($client_ip);
+if ($rate_limit_check['limited']) {
+    http_response_code(429); // Too Many Requests
+    if ($rate_limit_check['locked_until']) {
+        $until = date('g:i A', strtotime($rate_limit_check['locked_until']));
+        $error = "Too many failed verification attempts. Please try again after $until.";
+    } else {
+        $error = 'Too many verification attempts. Please try again later.';
+    }
+}
+
 $token = $_GET['t'] ?? '';
 $token = trim($token);
 
-if ($token === '') {
+if (!isset($error) && $token === '') {
     http_response_code(400);
     $error = 'Missing token parameter.';
-} else {
+    record_verification_attempt($client_ip, false);
+} elseif (!isset($error)) {
     // basic token validation: allow hex/base64-ish tokens (adjust as you used)
     if (!preg_match('/^[A-Za-z0-9_\-+=]+$/', $token)) {
         http_response_code(400);
         $error = 'Invalid token format.';
+        record_verification_attempt($client_ip, false);
     }
 }
 
@@ -21,11 +38,13 @@ $employee = null;
 if (!isset($error)) {
     try {
         $mysqli = get_db_connection();
-        
-        // Prepared statement to find by token
-        $sql = "SELECT employee_id, name, designation, department, status, photo_url, email, phone 
+
+        // Prepared statement to find by token and check expiration
+        $sql = "SELECT employee_id, name, designation, department, status, photo_url, email, phone,
+                       token_created_at, token_expires_at
                 FROM employees
-                WHERE token = ? LIMIT 1";
+                WHERE token = ?
+                LIMIT 1";
         $stmt = $mysqli->prepare($sql);
         if (!$stmt) {
             http_response_code(500);
@@ -35,10 +54,19 @@ if (!isset($error)) {
             $stmt->execute();
             $res = $stmt->get_result();
             if ($res && $row = $res->fetch_assoc()) {
-                $employee = $row;
+                // Check if token has expired
+                if ($row['token_expires_at'] !== null && strtotime($row['token_expires_at']) < time()) {
+                    http_response_code(410); // 410 Gone - resource expired
+                    $error = 'This verification token has expired. Please contact HR for a new verification link.';
+                    record_verification_attempt($client_ip, false);
+                } else {
+                    $employee = $row;
+                    record_verification_attempt($client_ip, true); // Successful verification
+                }
             } else {
                 http_response_code(404);
                 $error = 'Employee not found.';
+                record_verification_attempt($client_ip, false);
             }
             $stmt->close();
         }
@@ -46,6 +74,7 @@ if (!isset($error)) {
     } catch (Exception $e) {
         http_response_code(500);
         $error = 'Database connection failed.';
+        record_verification_attempt($client_ip, false);
     }
 }
 

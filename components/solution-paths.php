@@ -40,52 +40,52 @@ $solutions = [
 ];
 ?>
 
-<section id="capabilities" class="py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+<section id="capabilities" class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 sm:mb-12 md:mb-16">
+            <p class="text-blue-400 uppercase tracking-[0.2em] sm:tracking-[0.3em] text-xs sm:text-sm font-semibold mb-2 sm:mb-3">
                 One Team, Multiple Solutions
             </p>
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 px-4">
                 Who We Serve & How We Deliver
             </h2>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                 Different industries, different challenges—same integrated pipeline.
             </p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             <?php foreach ($solutions as $idx => $sol): ?>
-                <article class="group bg-gradient-to-br from-gray-800/60 to-gray-900/80 rounded-2xl p-8 border border-gray-700/50 hover:border-red-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/10">
-                    <div class="flex items-start gap-4 mb-6">
-                        <span class="text-5xl" role="img" aria-label="<?= h($sol['persona']) ?>"><?= $sol['icon'] ?></span>
+                <article class="group bg-gradient-to-br from-gray-800/60 to-gray-900/80 rounded-2xl p-6 sm:p-8 border border-gray-700/50 hover:border-red-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/10">
+                    <div class="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+                        <span class="text-4xl sm:text-5xl" role="img" aria-label="<?= h($sol['persona']) ?>"><?= $sol['icon'] ?></span>
                         <div>
-                            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                            <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
                                 <?= h($sol['persona']) ?>
                             </h3>
-                            <p class="text-gray-400 text-sm mt-1">
+                            <p class="text-gray-400 text-xs sm:text-sm mt-1">
                                 <strong>Challenge:</strong> <?= h($sol['challenge']) ?>
                             </p>
                         </div>
                     </div>
 
-                    <div class="space-y-4">
-                        <div class="bg-gray-950/50 rounded-lg p-4 border-l-4 border-red-500">
-                            <p class="text-sm text-gray-400 uppercase tracking-wide mb-2">Our Solution</p>
-                            <p class="text-white font-mono text-sm">
+                    <div class="space-y-3 sm:space-y-4">
+                        <div class="bg-gray-950/50 rounded-lg p-3 sm:p-4 border-l-4 border-red-500">
+                            <p class="text-xs sm:text-sm text-gray-400 uppercase tracking-wide mb-2">Our Solution</p>
+                            <p class="text-white font-mono text-xs sm:text-sm">
                                 <?= h($sol['solution']) ?>
                             </p>
                         </div>
 
                         <div class="flex flex-wrap gap-2">
                             <?php foreach ($sol['services'] as $service): ?>
-                                <span class="px-3 py-1 bg-red-600/20 text-red-300 rounded-full text-xs font-medium border border-red-500/30">
+                                <span class="px-2 py-1 sm:px-3 sm:py-1 bg-red-600/20 text-red-300 rounded-full text-xs font-medium border border-red-500/30">
                                     <?= h($service) ?>
                                 </span>
                             <?php endforeach; ?>
                         </div>
 
-                        <blockquote class="italic text-gray-300 text-lg border-l-2 border-gray-700 pl-4 mt-4">
+                        <blockquote class="italic text-gray-300 text-base sm:text-lg border-l-2 border-gray-700 pl-3 sm:pl-4 mt-3 sm:mt-4">
                             "<?= h($sol['outcome']) ?>"
                         </blockquote>
                     </div>
@@ -93,13 +93,13 @@ $solutions = [
             <?php endforeach; ?>
         </div>
 
-        <div class="mt-16 text-center">
-            <p class="text-gray-400 mb-6 text-lg">
+        <div class="mt-10 sm:mt-12 md:mt-16 text-center">
+            <p class="text-gray-400 mb-4 sm:mb-6 text-base sm:text-lg px-4">
                 Not sure which solution fits your needs?
             </p>
             <a
                 href="<?= asset('contact.php') ?>"
-                class="inline-block px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-bold rounded-lg hover:from-red-600 hover:to-red-700 transition-all transform hover:scale-105 shadow-lg shadow-red-500/30"
+                class="inline-block w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-red-500 to-red-600 text-white text-base sm:text-lg font-bold rounded-lg hover:from-red-600 hover:to-red-700 transition-all transform hover:scale-105 shadow-lg shadow-red-500/30"
             >
                 Schedule a Consultation →
             </a>

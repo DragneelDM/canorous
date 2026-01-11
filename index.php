@@ -32,22 +32,22 @@ $page_keywords = 'MEP engineering, turnkey manufacturing, Unreal Engine, VR/AR, 
     ?>
 
     <!-- Featured Portfolio Section -->
-    <section class="py-20 bg-gradient-to-b from-gray-900 to-gray-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+    <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 to-gray-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-10 md:mb-12">
+                <p class="text-blue-400 uppercase tracking-[0.2em] sm:tracking-[0.3em] text-xs sm:text-sm font-semibold mb-2 sm:mb-3">
                     Our Work
                 </p>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 px-4">
                     Featured Projects
                 </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                     Engineering validation, 3D visualization, and VR experiences—delivered as one integrated solution.
                 </p>
             </div>
 
             <!-- Portfolio Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <?php
                 // Load featured projects from each domain (2 from each)
                 $engineeringData = load_json_data('engineering.json');
@@ -72,7 +72,7 @@ $page_keywords = 'MEP engineering, turnkey manufacturing, Unreal Engine, VR/AR, 
                 ?>
                     <article class="group bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 hover:border-red-500 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20">
                         <!-- Project Image -->
-                        <div class="relative h-56 overflow-hidden bg-gray-900">
+                        <div class="relative aspect-video overflow-hidden bg-gray-900">
                             <img
                                 src="<?= asset($project['image']) ?>"
                                 alt="<?= h($project['title']) ?>"
@@ -82,19 +82,19 @@ $page_keywords = 'MEP engineering, turnkey manufacturing, Unreal Engine, VR/AR, 
                             <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
 
                             <!-- Category Badge -->
-                            <div class="absolute top-4 right-4">
-                                <span class="px-3 py-1 bg-red-600 text-white rounded-full text-xs font-semibold backdrop-blur-sm">
+                            <div class="absolute top-3 right-3 sm:top-4 sm:right-4">
+                                <span class="px-2 py-1 sm:px-3 sm:py-1 bg-red-600 text-white rounded-full text-xs font-semibold backdrop-blur-sm">
                                     <?= h($project['category']) ?>
                                 </span>
                             </div>
                         </div>
 
                         <!-- Project Info -->
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">
                                 <?= h($project['title']) ?>
                             </h3>
-                            <p class="text-gray-300 text-sm">
+                            <p class="text-gray-300 text-sm sm:text-base">
                                 <?= h($project['description']) ?>
                             </p>
                         </div>
@@ -103,10 +103,10 @@ $page_keywords = 'MEP engineering, turnkey manufacturing, Unreal Engine, VR/AR, 
             </div>
 
             <!-- CTA to Full Portfolio -->
-            <div class="text-center mt-12">
+            <div class="text-center mt-8 sm:mt-10 md:mt-12">
                 <a
                     href="<?= asset('portfolio.php') ?>"
-                    class="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg"
+                    class="inline-block w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-base sm:text-lg font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg"
                 >
                     View Full Portfolio →
                 </a>

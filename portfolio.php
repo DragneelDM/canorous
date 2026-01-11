@@ -34,50 +34,52 @@ $allProjects = array_merge(
     ?>
 
     <!-- Portfolio Section -->
-    <section id="portfolio-grid" class="py-20 bg-gradient-to-b from-gray-950 to-gray-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+    <section id="portfolio-grid" class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-950 to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-10 md:mb-12">
+                <p class="text-blue-400 uppercase tracking-[0.2em] sm:tracking-[0.3em] text-xs sm:text-sm font-semibold mb-2 sm:mb-3">
                     Integrated Capabilities
                 </p>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 px-4">
                     Our Work Across All Domains
                 </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                     From FEA simulations to precision manufacturing to immersive VR—explore projects that showcase our complete engineering-to-visualization pipeline.
                 </p>
             </div>
 
             <!-- Filter Tabs -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12 px-4">
                 <button
-                    class="portfolio-filter px-6 py-3 bg-red-600 text-white rounded-lg font-semibold transition-all hover:bg-red-700 active"
+                    class="portfolio-filter px-4 py-2 sm:px-6 sm:py-3 bg-red-600 text-white rounded-lg text-sm sm:text-base font-semibold transition-all hover:bg-red-700 active"
                     data-filter="all"
                 >
                     All Projects
                 </button>
                 <button
-                    class="portfolio-filter px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold transition-all hover:bg-gray-700"
+                    class="portfolio-filter px-4 py-2 sm:px-6 sm:py-3 bg-gray-800 text-white rounded-lg text-sm sm:text-base font-semibold transition-all hover:bg-gray-700"
                     data-filter="engineering"
                 >
-                    Engineering & FEA
+                    <span class="hidden sm:inline">Engineering & FEA</span>
+                    <span class="sm:hidden">Engineering</span>
                 </button>
                 <button
-                    class="portfolio-filter px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold transition-all hover:bg-gray-700"
+                    class="portfolio-filter px-4 py-2 sm:px-6 sm:py-3 bg-gray-800 text-white rounded-lg text-sm sm:text-base font-semibold transition-all hover:bg-gray-700"
                     data-filter="manufacturing"
                 >
                     Manufacturing
                 </button>
                 <button
-                    class="portfolio-filter px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold transition-all hover:bg-gray-700"
+                    class="portfolio-filter px-4 py-2 sm:px-6 sm:py-3 bg-gray-800 text-white rounded-lg text-sm sm:text-base font-semibold transition-all hover:bg-gray-700"
                     data-filter="unreal"
                 >
-                    3D & Unreal Studio
+                    <span class="hidden sm:inline">3D & Unreal Studio</span>
+                    <span class="sm:hidden">3D Studio</span>
                 </button>
             </div>
 
             <!-- Portfolio Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="portfolio-container">
                 <?php if (empty($allProjects)): ?>
                     <div class="col-span-full text-center py-12">
                         <p class="text-gray-400 text-lg">Portfolio projects coming soon...</p>
@@ -89,7 +91,7 @@ $allProjects = array_merge(
                             data-category="<?= h($project['category']) ?>"
                         >
                             <!-- Project Image -->
-                            <div class="relative h-64 overflow-hidden bg-gray-900">
+                            <div class="relative aspect-video overflow-hidden bg-gray-900">
                                 <img
                                     src="<?= asset($project['image']) ?>"
                                     alt="<?= h($project['title']) ?>"
@@ -99,15 +101,15 @@ $allProjects = array_merge(
                                 <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
 
                                 <!-- Category Badge -->
-                                <div class="absolute top-4 right-4">
-                                    <span class="px-3 py-1 bg-red-600/90 text-white rounded-full text-xs font-semibold backdrop-blur-sm">
+                                <div class="absolute top-3 right-3 sm:top-4 sm:right-4">
+                                    <span class="px-2 py-1 sm:px-3 sm:py-1 bg-red-600/90 text-white rounded-full text-xs font-semibold backdrop-blur-sm">
                                         <?= h($project['categoryLabel']) ?>
                                     </span>
                                 </div>
                             </div>
 
                             <!-- Project Info -->
-                            <div class="p-6">
+                            <div class="p-4 sm:p-6">
                                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
                                     <?= h($project['title']) ?>
                                 </h3>
@@ -163,26 +165,27 @@ $allProjects = array_merge(
     </div>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-b from-gray-900 to-gray-950 border-t border-gray-800">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+    <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 to-gray-950 border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
                 Ready to Start Your Project?
             </h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto">
                 Whether you need FEA validation, precision manufacturing, or immersive VR experiences—we deliver complete solutions from concept to deployment.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-2xl mx-auto">
                 <a
                     href="<?= asset('contact.php') ?>"
-                    class="px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-bold rounded-lg hover:from-red-600 hover:to-red-700 transition-all shadow-lg"
+                    class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-red-500 to-red-600 text-white text-base sm:text-lg font-bold rounded-lg hover:from-red-600 hover:to-red-700 transition-all shadow-lg text-center"
                 >
                     Get Started →
                 </a>
                 <a
                     href="<?= asset('solutions.php') ?>"
-                    class="px-8 py-4 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition-all border border-gray-700"
+                    class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gray-800 text-white text-base sm:text-lg font-semibold rounded-lg hover:bg-gray-700 transition-all border border-gray-700 text-center"
                 >
-                    Explore Solutions by Industry
+                    <span class="hidden md:inline">Explore Solutions by Industry</span>
+                    <span class="md:hidden">View Solutions</span>
                 </a>
             </div>
         </div>

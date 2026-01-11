@@ -1,14 +1,34 @@
 # Canorous Technologies - Apache Configuration
 
-# Enable Rewrite Engine
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
 
     # Redirect old 3D Studio page to Unreal Studio (merged)
     RewriteRule ^3d-studio\.php$ unreal-studio.php [R=301,L]
 
     # Redirect old Manufacturing page to Engineering (merged)
     RewriteRule ^manufacturing\.php$ engineering.php [R=301,L]
+
+    # Serve existing files and directories directly (including .php, .html, static assets)
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Portal directory - let PHP handle it
+    RewriteCond %{REQUEST_URI} ^/portal/
+    RewriteRule ^ - [L]
+
+    # /verify/TOKEN  =>  /verify.php?t=TOKEN
+    RewriteRule ^verify/([-A-Za-z0-9_+=]+)/?$ verify.php?t=$1 [L,QSA]
+
+    # Next.js SPA fallback - route unknown paths to index.html for client-side routing
+    # This allows Next.js to handle routes like /engineering, /contact, etc.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^/portal/
+    RewriteCond %{REQUEST_URI} !^/verify/
+    RewriteRule ^ index.html [L]
 </IfModule>
 
 # Enable Gzip Compression for Performance
