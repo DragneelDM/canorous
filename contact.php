@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<main class="min-h-screen bg-gray-900 text-white px-4 md:px-16 py-16">
+<main class="min-h-screen bg-gray-950 text-white px-4 md:px-16 py-16">
     <section class="text-center mb-12">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
         <p class="text-gray-300 max-w-2xl mx-auto">
@@ -65,7 +65,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </p>
     </section>
 
-    <section class="grid md:grid-cols-2 gap-12">
+    <!-- Consultation CTA -->
+    <section class="max-w-4xl mx-auto mb-12">
+        <div class="bg-gradient-to-r from-blue-900/30 to-blue-800/30 rounded-2xl p-8 border border-blue-700/30">
+            <h2 class="text-3xl font-bold text-white mb-4 text-center">
+                Schedule a Free Consultation
+            </h2>
+            <p class="text-gray-300 text-center mb-6 text-lg">
+                Not sure where to start? Book a 30-minute call to discuss your project needs and explore how our integrated engineering, manufacturing, and VR capabilities can deliver results.
+            </p>
+            <div class="text-center">
+                <a
+                    href="mailto:sales@can-india.co.in?subject=Schedule%20Consultation"
+                    class="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg"
+                >
+                    Book a Call →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
         <!-- Form -->
         <form
             class="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col gap-4"
@@ -80,22 +100,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 value="<?= isset($name) ? h($name) : '' ?>"
                 class="p-3 rounded-md bg-gray-700 text-white placeholder-gray-400" 
             />
-            <input 
-                type="email" 
-                name="email" 
-                placeholder="Your Email" 
-                required 
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
                 value="<?= isset($email) ? h($email) : '' ?>"
-                class="p-3 rounded-md bg-gray-700 text-white placeholder-gray-400" 
+                class="p-3 rounded-md bg-gray-700 text-white placeholder-gray-400"
             />
-            <input 
-                type="text" 
-                name="subject" 
-                placeholder="Subject" 
-                required 
-                value="<?= isset($subject) ? h($subject) : '' ?>"
-                class="p-3 rounded-md bg-gray-700 text-white placeholder-gray-400" 
-            />
+            <select
+                name="subject"
+                required
+                class="p-3 rounded-md bg-gray-700 text-white"
+            >
+                <option value="">Select inquiry type...</option>
+                <option value="Engineering & FEA" <?= (isset($subject) && $subject === 'Engineering & FEA') ? 'selected' : '' ?>>Engineering & FEA Simulation</option>
+                <option value="Manufacturing" <?= (isset($subject) && $subject === 'Manufacturing') ? 'selected' : '' ?>>Manufacturing & Supply Chain</option>
+                <option value="Unreal Studio & VR" <?= (isset($subject) && $subject === 'Unreal Studio & VR') ? 'selected' : '' ?>>Unreal Studio & VR/AR Project</option>
+                <option value="3D Asset Creation" <?= (isset($subject) && $subject === '3D Asset Creation') ? 'selected' : '' ?>>3D Asset Creation</option>
+                <option value="Solutions Consultation" <?= (isset($subject) && $subject === 'Solutions Consultation') ? 'selected' : '' ?>>Solutions Consultation</option>
+                <option value="General" <?= (isset($subject) && $subject === 'General') ? 'selected' : '' ?>>General Inquiry</option>
+            </select>
             <textarea 
                 name="message" 
                 rows="5" 

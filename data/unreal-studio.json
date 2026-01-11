@@ -1,0 +1,109 @@
+[
+  {
+    "title": "Residential Villa - Architectural Visualization",
+    "description": "Photorealistic architectural visualization with pixel streaming for real estate client. Interactive browser-based walkthrough.",
+    "image": "public/images/img1.png",
+    "category": "Archviz",
+    "tags": ["Unreal Engine", "Pixel Streaming", "Architectural Visualization"],
+    "featured": true
+  },
+  {
+    "title": "Industrial Product Configurator - VR Experience",
+    "description": "VR product configurator allowing clients to customize valve assemblies in real-time with material and color options.",
+    "image": "public/images/img2.jpg",
+    "category": "VR/AR",
+    "tags": ["VR", "Product Configurator", "Unreal Engine"],
+    "featured": true
+  },
+  {
+    "title": "Commercial Building - Pixel Streaming Demo",
+    "description": "Cloud-deployed commercial building walkthrough accessible from any browser without VR headset or powerful hardware.",
+    "image": "public/images/img3.gif",
+    "category": "Archviz",
+    "tags": ["Pixel Streaming", "Architectural Visualization", "Cloud Deployment"]
+  },
+  {
+    "title": "Product Assembly Training Simulator",
+    "description": "VR training simulator for industrial product assembly with step-by-step guidance and performance tracking.",
+    "image": "public/images/img4.png",
+    "category": "VR/AR",
+    "tags": ["VR", "Training", "Unity"]
+  },
+  {
+    "title": "3D Product Showcase - Web Integration",
+    "description": "Interactive 3D product showcase integrated with e-commerce platform. Real-time material changes and configuration.",
+    "image": "public/images/img5.jpg",
+    "category": "3D Assets",
+    "tags": ["3D Modeling", "Blender", "Substance Painter"]
+  },
+  {
+    "title": "Luxury Interior - Architectural Visualization",
+    "description": "High-end residential interior visualization with photorealistic lighting and materials for real estate marketing.",
+    "image": "public/images/img6.jpg",
+    "category": "Archviz",
+    "tags": ["Unreal Engine", "Archviz", "Interior Design"]
+  },
+  {
+    "title": "Machinery Demo - AR Mobile App",
+    "description": "Augmented reality mobile application for machinery demos at trade shows. Place full-scale equipment in any space.",
+    "image": "public/images/bracket.jpg",
+    "category": "VR/AR",
+    "tags": ["AR", "Mobile", "Unity"]
+  },
+  {
+    "title": "Industrial Equipment - 3D Asset Library",
+    "description": "Complete 3D asset library of industrial equipment with game-ready optimization and PBR materials.",
+    "image": "public/images/brass.jpg",
+    "category": "3D Assets",
+    "tags": ["3D Modeling", "Blender", "PBR Materials"]
+  },
+  {
+    "title": "Office Complex - Virtual Tour",
+    "description": "Interactive virtual tour of commercial office complex with pixel streaming deployment for remote client presentations.",
+    "image": "public/images/crimps.jpg",
+    "category": "Archviz",
+    "tags": ["Unreal Engine", "Virtual Tour", "Pixel Streaming"]
+  },
+  {
+    "title": "Manufacturing Process - Digital Twin",
+    "description": "Real-time digital twin of manufacturing process with live data integration for monitoring and optimization.",
+    "image": "public/images/Galvanized.jpg",
+    "category": "VR/AR",
+    "tags": ["Digital Twin", "Unreal Engine", "IoT Integration"]
+  },
+  {
+    "title": "Product Line - Photorealistic Renders",
+    "description": "Marketing-ready photorealistic renders of complete product line created in Blender with Substance textures.",
+    "image": "public/images/pullev.jpg",
+    "category": "3D Assets",
+    "tags": ["Blender", "Substance Painter", "Photorealistic Rendering"]
+  },
+  {
+    "title": "Shopping Mall - Interactive Walkthrough",
+    "description": "Browser-based interactive shopping mall experience with wayfinding and store information integration.",
+    "image": "public/images/rope sling.jpg",
+    "category": "Archviz",
+    "tags": ["Unreal Engine", "Interactive Experience", "Pixel Streaming"]
+  },
+  {
+    "title": "Custom Gaming Experience - Unreal Engine",
+    "description": "Custom interactive gaming experience built in Unreal Engine with full-stack backend for user management.",
+    "image": "public/images/slings.jpg",
+    "category": "Games",
+    "tags": ["Unreal Engine", "Game Development", "Full-Stack"]
+  },
+  {
+    "title": "Engineering CAD to 3D Pipeline",
+    "description": "Complete pipeline from engineering CAD files to game-ready 3D assets for VR deployment with FEA data visualization.",
+    "image": "public/images/swages.jpg",
+    "category": "3D Assets",
+    "tags": ["CAD Integration", "3D Pipeline", "FEA Visualization"]
+  },
+  {
+    "title": "Hotel & Resort - VR Preview",
+    "description": "VR preview experience for hotel guests allowing them to explore rooms and amenities before booking.",
+    "image": "public/images/thimbles.jpg",
+    "category": "Archviz",
+    "tags": ["VR", "Hospitality", "Unreal Engine"]
+  }
+]

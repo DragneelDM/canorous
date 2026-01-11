@@ -51,23 +51,28 @@ $overlayColor = $overlayColor ?? 'bg-gray-900/70';
     <?php endif; ?>
 
     <!-- Hero Content -->
-    <div class="relative z-20 text-center px-4">
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4">
+    <div class="relative z-20 text-center px-4 max-w-6xl mx-auto">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
             <?= h($headline) ?>
-            <?php if (!empty($subbrands)): ?>
-                <span class="text-blue-400">
-                    <?= h(implode(' | ', $subbrands)) ?>
-                </span>
-            <?php endif; ?>
         </h1>
 
+        <?php if (!empty($subbrands)): ?>
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-6">
+                <?php foreach ($subbrands as $subbrand): ?>
+                    <span class="px-4 py-2 text-white text-sm md:text-base font-semibold rounded-full border-2 border-blue-400 hover:border-red-400 transition-colors">
+                        <?= h($subbrand) ?>
+                    </span>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+
         <?php if ($subtitle): ?>
-            <p class="text-lg md:text-2xl text-gray-300 mb-8"><?= h($subtitle) ?></p>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto"><?= h($subtitle) ?></p>
         <?php endif; ?>
 
         <a
             href="<?= h($ctaLink) ?>"
-            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition"
+            class="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-red-600 hover:from-blue-700 hover:to-red-700 text-white font-bold rounded-lg transition-all shadow-lg hover:scale-105 transform"
         >
             <?= h($ctaText) ?>
         </a>

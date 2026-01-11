@@ -22,7 +22,10 @@ $page_keywords = $page_keywords ?? 'MEP engineering, turnkey manufacturing, Unre
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?= asset('assets/css/custom.css') ?>">
-    
+
+    <!-- Dropdown Menu JavaScript -->
+    <script defer src="<?= asset('assets/js/dropdown-menu.js') ?>"></script>
+
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="<?= h($page_title) ?>">
     <meta property="og:description" content="<?= h($page_description) ?>">
@@ -44,24 +47,67 @@ $page_keywords = $page_keywords ?? 'MEP engineering, turnkey manufacturing, Unre
             </a>
 
             <!-- Desktop links -->
-            <div class="hidden md:flex space-x-6">
+            <div class="hidden md:flex space-x-6 items-center">
                 <?php
                 $links = [
-                    ['name' => 'Unreal Studio', 'href' => asset('unreal-studio.php')],
-                    ['name' => '3D Studio', 'href' => asset('3d-studio.php')],
-                    ['name' => 'Services', 'href' => asset('engineering.php')],
-                    ['name' => 'Careers', 'href' => asset('contact.php')],
+                    [
+                        'name' => 'Capabilities',
+                        'href' => '#',
+                        'dropdown' => [
+                            ['name' => 'Engineering & Manufacturing', 'href' => asset('engineering.php')],
+                            ['name' => 'Unreal Studio & 3D Pipeline', 'href' => asset('unreal-studio.php')],
+                        ]
+                    ],
+                    [
+                        'name' => 'Solutions',
+                        'href' => '#',
+                        'dropdown' => [
+                            ['name' => 'For Manufacturers', 'href' => asset('solutions.php') . '#manufacturers'],
+                            ['name' => 'For Architects & Real Estate', 'href' => asset('solutions.php') . '#architects'],
+                            ['name' => 'For Product Designers', 'href' => asset('solutions.php') . '#designers'],
+                            ['name' => 'For Enterprise & Training', 'href' => asset('solutions.php') . '#enterprise'],
+                        ]
+                    ],
+                    ['name' => 'Portfolio', 'href' => asset('portfolio.php')],
+                    ['name' => 'About', 'href' => asset('about.php')],
                     ['name' => 'Contact', 'href' => asset('contact.php')],
                 ];
                 foreach ($links as $link):
-                    $isActive = ($current_path === $link['href'] || $current_path === str_replace('.php', '', $link['href']));
+                    $isActive = isset($link['href']) && $link['href'] !== '#' && ($current_path === $link['href'] || $current_path === str_replace('.php', '', $link['href']));
+
+                    if (isset($link['dropdown'])):
                 ?>
+                    <!-- Dropdown Menu -->
+                    <div class="relative dropdown-container">
+                        <button
+                            class="text-white hover:text-blue-500 font-medium flex items-center gap-1 dropdown-trigger"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            <?= h($link['name']) ?>
+                            <svg class="w-4 h-4 transition-transform dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 hidden">
+                            <?php foreach ($link['dropdown'] as $item): ?>
+                                <a
+                                    href="<?= h($item['href']) ?>"
+                                    class="block px-4 py-2 text-white hover:bg-gray-700 hover:text-blue-400 transition-colors"
+                                >
+                                    <?= h($item['name']) ?>
+                                </a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                <?php else: ?>
                     <a
                         href="<?= h($link['href']) ?>"
                         class="text-white hover:text-blue-500 font-medium <?= $isActive ? 'text-blue-500' : '' ?>"
                     >
                         <?= h($link['name']) ?>
                     </a>
+                <?php endif; ?>
                 <?php endforeach; ?>
             </div>
 
@@ -80,14 +126,39 @@ $page_keywords = $page_keywords ?? 'MEP engineering, turnkey manufacturing, Unre
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-900 px-4 pb-4 space-y-2">
             <?php foreach ($links as $link):
-                $isActive = ($current_path === $link['href'] || $current_path === str_replace('.php', '', $link['href']));
+                $isActive = isset($link['href']) && $link['href'] !== '#' && ($current_path === $link['href'] || $current_path === str_replace('.php', '', $link['href']));
+
+                if (isset($link['dropdown'])):
             ?>
+                <!-- Mobile Dropdown -->
+                <div class="mobile-dropdown">
+                    <button
+                        class="w-full text-left text-white hover:text-blue-500 font-medium flex items-center justify-between mobile-dropdown-trigger"
+                    >
+                        <?= h($link['name']) ?>
+                        <svg class="w-4 h-4 transition-transform mobile-dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+                        <?php foreach ($link['dropdown'] as $item): ?>
+                            <a
+                                href="<?= h($item['href']) ?>"
+                                class="block text-gray-300 hover:text-blue-400 text-sm"
+                            >
+                                <?= h($item['name']) ?>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            <?php else: ?>
                 <a
                     href="<?= h($link['href']) ?>"
                     class="block text-white hover:text-blue-500 font-medium <?= $isActive ? 'text-blue-500' : '' ?>"
                 >
                     <?= h($link['name']) ?>
                 </a>
+            <?php endif; ?>
             <?php endforeach; ?>
         </div>
     </nav>
